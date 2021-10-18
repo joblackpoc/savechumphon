@@ -1,0 +1,971 @@
+[Sun Oct 17 16:50:08.364431 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622] Session data corrupted
+[Sun Oct 17 16:50:08.517875 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622] Internal Server Error: /
+[Sun Oct 17 16:50:08.517892 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622] Traceback (most recent call last):
+[Sun Oct 17 16:50:08.517898 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+[Sun Oct 17 16:50:08.517902 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return self.cursor.execute(sql, params)
+[Sun Oct 17 16:50:08.517907 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+[Sun Oct 17 16:50:08.517911 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return self.cursor.execute(query, args)
+[Sun Oct 17 16:50:08.517915 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+[Sun Oct 17 16:50:08.517920 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     res = self._query(query)
+[Sun Oct 17 16:50:08.517924 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/MySQLdb/cursors.py", line 319, in _query
+[Sun Oct 17 16:50:08.517928 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     db.query(q)
+[Sun Oct 17 16:50:08.517932 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/MySQLdb/connections.py", line 259, in query
+[Sun Oct 17 16:50:08.517937 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     _mysql.connection.query(self, query)
+[Sun Oct 17 16:50:08.517941 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622] MySQLdb._exceptions.ProgrammingError: (1146, "Table 'savechumphon.main_cchangwat' doesn't exist")
+[Sun Oct 17 16:50:08.517945 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622] 
+[Sun Oct 17 16:50:08.517949 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622] The above exception was the direct cause of the following exception:
+[Sun Oct 17 16:50:08.517953 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622] 
+[Sun Oct 17 16:50:08.517957 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622] Traceback (most recent call last):
+[Sun Oct 17 16:50:08.517961 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+[Sun Oct 17 16:50:08.517966 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     response = get_response(request)
+[Sun Oct 17 16:50:08.517970 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+[Sun Oct 17 16:50:08.517974 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Sun Oct 17 16:50:08.517978 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/django/savecmpo/main/views.py", line 17, in Home
+[Sun Oct 17 16:50:08.517983 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return render(request, 'main/home.html', {'form':form})
+[Sun Oct 17 16:50:08.517987 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+[Sun Oct 17 16:50:08.518008 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     content = loader.render_to_string(template_name, context, request, using=using)
+[Sun Oct 17 16:50:08.518013 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+[Sun Oct 17 16:50:08.518017 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return template.render(context, request)
+[Sun Oct 17 16:50:08.518021 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+[Sun Oct 17 16:50:08.518026 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return self.template.render(context)
+[Sun Oct 17 16:50:08.518030 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 170, in render
+[Sun Oct 17 16:50:08.518034 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return self._render(context)
+[Sun Oct 17 16:50:08.518038 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 162, in _render
+[Sun Oct 17 16:50:08.518043 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return self.nodelist.render(context)
+[Sun Oct 17 16:50:08.518047 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+[Sun Oct 17 16:50:08.518051 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     bit = node.render_annotated(context)
+[Sun Oct 17 16:50:08.518055 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+[Sun Oct 17 16:50:08.518060 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return self.render(context)
+[Sun Oct 17 16:50:08.518064 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+[Sun Oct 17 16:50:08.518068 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return compiled_parent._render(context)
+[Sun Oct 17 16:50:08.518072 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 162, in _render
+[Sun Oct 17 16:50:08.518077 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return self.nodelist.render(context)
+[Sun Oct 17 16:50:08.518081 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+[Sun Oct 17 16:50:08.518085 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     bit = node.render_annotated(context)
+[Sun Oct 17 16:50:08.518089 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+[Sun Oct 17 16:50:08.518093 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return self.render(context)
+[Sun Oct 17 16:50:08.518097 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+[Sun Oct 17 16:50:08.518102 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     result = block.nodelist.render(context)
+[Sun Oct 17 16:50:08.518110 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+[Sun Oct 17 16:50:08.518114 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     bit = node.render_annotated(context)
+[Sun Oct 17 16:50:08.518119 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+[Sun Oct 17 16:50:08.518123 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return self.render(context)
+[Sun Oct 17 16:50:08.518127 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 988, in render
+[Sun Oct 17 16:50:08.518131 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     output = self.filter_expression.resolve(context)
+[Sun Oct 17 16:50:08.518136 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 698, in resolve
+[Sun Oct 17 16:50:08.518140 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     new_obj = func(obj, *arg_vals)
+[Sun Oct 17 16:50:08.518144 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/crispy_forms/templatetags/crispy_forms_filters.py", line 122, in as_crispy_field
+[Sun Oct 17 16:50:08.518149 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return template.render(c)
+[Sun Oct 17 16:50:08.518153 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+[Sun Oct 17 16:50:08.518157 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return self.template.render(context)
+[Sun Oct 17 16:50:08.518162 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 170, in render
+[Sun Oct 17 16:50:08.518166 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return self._render(context)
+[Sun Oct 17 16:50:08.518170 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 162, in _render
+[Sun Oct 17 16:50:08.518174 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return self.nodelist.render(context)
+[Sun Oct 17 16:50:08.518178 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+[Sun Oct 17 16:50:08.518183 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     bit = node.render_annotated(context)
+[Sun Oct 17 16:50:08.518187 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+[Sun Oct 17 16:50:08.518191 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return self.render(context)
+[Sun Oct 17 16:50:08.518195 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 312, in render
+[Sun Oct 17 16:50:08.518199 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return nodelist.render(context)
+[Sun Oct 17 16:50:08.518204 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+[Sun Oct 17 16:50:08.518211 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     bit = node.render_annotated(context)
+[Sun Oct 17 16:50:08.518215 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+[Sun Oct 17 16:50:08.518220 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return self.render(context)
+[Sun Oct 17 16:50:08.518224 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 312, in render
+[Sun Oct 17 16:50:08.518228 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return nodelist.render(context)
+[Sun Oct 17 16:50:08.518232 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+[Sun Oct 17 16:50:08.518237 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     bit = node.render_annotated(context)
+[Sun Oct 17 16:50:08.518241 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+[Sun Oct 17 16:50:08.518245 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return self.render(context)
+[Sun Oct 17 16:50:08.518249 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 312, in render
+[Sun Oct 17 16:50:08.518253 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return nodelist.render(context)
+[Sun Oct 17 16:50:08.518258 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+[Sun Oct 17 16:50:08.518262 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     bit = node.render_annotated(context)
+[Sun Oct 17 16:50:08.518266 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+[Sun Oct 17 16:50:08.518271 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return self.render(context)
+[Sun Oct 17 16:50:08.518275 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 312, in render
+[Sun Oct 17 16:50:08.518279 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return nodelist.render(context)
+[Sun Oct 17 16:50:08.518283 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+[Sun Oct 17 16:50:08.518288 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     bit = node.render_annotated(context)
+[Sun Oct 17 16:50:08.518292 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+[Sun Oct 17 16:50:08.518296 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return self.render(context)
+[Sun Oct 17 16:50:08.518300 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/crispy_forms/templatetags/crispy_forms_field.py", line 157, in render
+[Sun Oct 17 16:50:08.518305 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return str(field)
+[Sun Oct 17 16:50:08.518311 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/utils/html.py", line 376, in <lambda>
+[Sun Oct 17 16:50:08.518316 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     klass.__str__ = lambda self: mark_safe(klass_str(self))
+[Sun Oct 17 16:50:08.518320 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/forms/boundfield.py", line 34, in __str__
+[Sun Oct 17 16:50:08.518325 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return self.as_widget()
+[Sun Oct 17 16:50:08.518329 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/forms/boundfield.py", line 97, in as_widget
+[Sun Oct 17 16:50:08.518333 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     renderer=self.form.renderer,
+[Sun Oct 17 16:50:08.518337 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/forms/widgets.py", line 246, in render
+[Sun Oct 17 16:50:08.518341 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     context = self.get_context(name, value, attrs)
+[Sun Oct 17 16:50:08.518345 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/forms/widgets.py", line 683, in get_context
+[Sun Oct 17 16:50:08.518350 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     context = super().get_context(name, value, attrs)
+[Sun Oct 17 16:50:08.518354 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/forms/widgets.py", line 644, in get_context
+[Sun Oct 17 16:50:08.518358 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     context['widget']['optgroups'] = self.optgroups(name, context['widget']['value'], attrs)
+[Sun Oct 17 16:50:08.518363 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/forms/widgets.py", line 592, in optgroups
+[Sun Oct 17 16:50:08.518367 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     for index, (option_value, option_label) in enumerate(self.choices):
+[Sun Oct 17 16:50:08.518371 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/forms/models.py", line 1169, in __iter__
+[Sun Oct 17 16:50:08.518375 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     for obj in queryset:
+[Sun Oct 17 16:50:08.518380 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/query.py", line 353, in _iterator
+[Sun Oct 17 16:50:08.518384 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     yield from self._iterable_class(self, chunked_fetch=use_chunked_fetch, chunk_size=chunk_size)
+[Sun Oct 17 16:50:08.518388 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/query.py", line 51, in __iter__
+[Sun Oct 17 16:50:08.518393 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+[Sun Oct 17 16:50:08.518397 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+[Sun Oct 17 16:50:08.518401 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     cursor.execute(sql, params)
+[Sun Oct 17 16:50:08.518408 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 98, in execute
+[Sun Oct 17 16:50:08.518413 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return super().execute(sql, params)
+[Sun Oct 17 16:50:08.518417 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
+[Sun Oct 17 16:50:08.518421 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+[Sun Oct 17 16:50:08.518426 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+[Sun Oct 17 16:50:08.518430 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return executor(sql, params, many, context)
+[Sun Oct 17 16:50:08.518434 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+[Sun Oct 17 16:50:08.518438 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return self.cursor.execute(sql, params)
+[Sun Oct 17 16:50:08.518442 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+[Sun Oct 17 16:50:08.518447 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     raise dj_exc_value.with_traceback(traceback) from exc_value
+[Sun Oct 17 16:50:08.518451 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+[Sun Oct 17 16:50:08.518455 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return self.cursor.execute(sql, params)
+[Sun Oct 17 16:50:08.518459 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+[Sun Oct 17 16:50:08.518464 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     return self.cursor.execute(query, args)
+[Sun Oct 17 16:50:08.518468 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/MySQLdb/cursors.py", line 206, in execute
+[Sun Oct 17 16:50:08.518472 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     res = self._query(query)
+[Sun Oct 17 16:50:08.518476 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/MySQLdb/cursors.py", line 319, in _query
+[Sun Oct 17 16:50:08.518480 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     db.query(q)
+[Sun Oct 17 16:50:08.518484 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]   File "/savechumphon/venv/lib/python3.6/site-packages/MySQLdb/connections.py", line 259, in query
+[Sun Oct 17 16:50:08.518489 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622]     _mysql.connection.query(self, query)
+[Sun Oct 17 16:50:08.518494 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622] django.db.utils.ProgrammingError: (1146, "Table 'savechumphon.main_cchangwat' doesn't exist")
+[Sun Oct 17 16:50:08.518503 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:49622] 
+[Sun Oct 17 16:51:44.578981 2021] [authz_core:error] [pid 4263:tid 140303307826944] [client 58.11.93.75:63371] AH01630: client denied by server configuration: /savechumphon/django/savecmpo/static/assets/css/main.css, referer: http://61.19.80.143/
+[Sun Oct 17 16:51:44.608077 2021] [authz_core:error] [pid 4262:tid 140303092610816] [client 58.11.93.75:63591] AH01630: client denied by server configuration: /savechumphon/django/savecmpo/static/assets/js/jquery.min.js, referer: http://61.19.80.143/
+[Sun Oct 17 16:51:44.608883 2021] [authz_core:error] [pid 4263:tid 140303176537856] [client 58.11.93.75:50950] AH01630: client denied by server configuration: /savechumphon/django/savecmpo/static/assets/js/browser.min.js, referer: http://61.19.80.143/
+[Sun Oct 17 16:51:44.609871 2021] [authz_core:error] [pid 4262:tid 140303084218112] [client 58.11.93.75:53412] AH01630: client denied by server configuration: /savechumphon/django/savecmpo/static/assets/js/main.js, referer: http://61.19.80.143/
+[Sun Oct 17 16:51:44.610246 2021] [authz_core:error] [pid 4263:tid 140303218501376] [client 58.11.93.75:63747] AH01630: client denied by server configuration: /savechumphon/django/savecmpo/static/assets/js/util.js, referer: http://61.19.80.143/
+[Sun Oct 17 16:51:44.620752 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:63671] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 16:51:45.719394 2021] [authz_core:error] [pid 4262:tid 140303168145152] [client 58.11.93.75:63671] AH01630: client denied by server configuration: /savechumphon/django/savecmpo/static/assets/js/jquery.min.js, referer: http://61.19.80.143/
+[Sun Oct 17 16:51:45.771076 2021] [authz_core:error] [pid 4262:tid 140303193323264] [client 58.11.93.75:63671] AH01630: client denied by server configuration: /savechumphon/django/savecmpo/static/assets/js/browser.min.js, referer: http://61.19.80.143/
+[Sun Oct 17 16:51:45.818571 2021] [wsgi:error] [pid 4261:tid 140303274256128] [remote 58.11.93.75:63671] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 16:51:45.852967 2021] [authz_core:error] [pid 4262:tid 140303151359744] [client 58.11.93.75:63671] AH01630: client denied by server configuration: /savechumphon/django/savecmpo/static/assets/js/util.js, referer: http://61.19.80.143/
+[Sun Oct 17 16:51:45.886062 2021] [authz_core:error] [pid 4262:tid 140303075825408] [client 58.11.93.75:63671] AH01630: client denied by server configuration: /savechumphon/django/savecmpo/static/assets/js/main.js, referer: http://61.19.80.143/
+[Sun Oct 17 16:53:04.124078 2021] [authz_core:error] [pid 4263:tid 140303201715968] [client 58.11.93.75:51531] AH01630: client denied by server configuration: /savechumphon/django/savecmpo/static/assets/css/main.css, referer: http://61.19.80.143/
+[Sun Oct 17 16:53:04.152632 2021] [authz_core:error] [pid 4263:tid 140303210108672] [client 58.11.93.75:50835] AH01630: client denied by server configuration: /savechumphon/django/savecmpo/static/assets/js/jquery.min.js, referer: http://61.19.80.143/
+[Sun Oct 17 16:53:04.152953 2021] [authz_core:error] [pid 4263:tid 140303210108672] [client 58.11.93.75:59458] AH01630: client denied by server configuration: /savechumphon/django/savecmpo/static/assets/js/browser.min.js, referer: http://61.19.80.143/
+[Sun Oct 17 16:53:04.153148 2021] [authz_core:error] [pid 4262:tid 140303201715968] [client 58.11.93.75:55459] AH01630: client denied by server configuration: /savechumphon/django/savecmpo/static/assets/js/util.js, referer: http://61.19.80.143/
+[Sun Oct 17 16:53:04.153587 2021] [authz_core:error] [pid 4262:tid 140303117788928] [client 58.11.93.75:53229] AH01630: client denied by server configuration: /savechumphon/django/savecmpo/static/assets/js/main.js, referer: http://61.19.80.143/
+[Sun Oct 17 16:53:04.167909 2021] [wsgi:error] [pid 4261:tid 140303274256128] [remote 58.11.93.75:62019] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 16:53:04.186833 2021] [authz_core:error] [pid 4262:tid 140303109396224] [client 58.11.93.75:55459] AH01630: client denied by server configuration: /savechumphon/django/savecmpo/static/assets/js/browser.min.js, referer: http://61.19.80.143/
+[Sun Oct 17 16:53:04.229548 2021] [wsgi:error] [pid 4261:tid 140303265863424] [remote 58.11.93.75:55459] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 16:53:04.262672 2021] [authz_core:error] [pid 4262:tid 140303101003520] [client 58.11.93.75:55459] AH01630: client denied by server configuration: /savechumphon/django/savecmpo/static/assets/js/util.js, referer: http://61.19.80.143/
+[Sun Oct 17 16:53:04.294687 2021] [authz_core:error] [pid 4262:tid 140303218501376] [client 58.11.93.75:55459] AH01630: client denied by server configuration: /savechumphon/django/savecmpo/static/assets/js/main.js, referer: http://61.19.80.143/
+Exception ignored in: <bound method BaseEventLoop.__del__ of <_UnixSelectorEventLoop running=False closed=False debug=False>>
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/asyncio/base_events.py", line 526, in __del__
+NameError: name 'ResourceWarning' is not defined
+[Sun Oct 17 16:56:30.325288 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:57931] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 16:56:30.641677 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:61867] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 17:05:25.882073 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:53514] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 17:05:26.281056 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:65354] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 17:06:25.090309 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:64392] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 17:07:05.462433 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452] Session data corrupted
+[Sun Oct 17 17:07:05.562139 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452] Internal Server Error: /
+[Sun Oct 17 17:07:05.562162 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452] Traceback (most recent call last):
+[Sun Oct 17 17:07:05.562170 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+[Sun Oct 17 17:07:05.562178 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]     response = get_response(request)
+[Sun Oct 17 17:07:05.562184 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+[Sun Oct 17 17:07:05.562191 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Sun Oct 17 17:07:05.562198 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]   File "/savechumphon/django/savecmpo/main/views.py", line 13, in Home
+[Sun Oct 17 17:07:05.562204 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]     form.save()
+[Sun Oct 17 17:07:05.562211 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]   File "/savechumphon/venv/lib/python3.6/site-packages/django/forms/models.py", line 468, in save
+[Sun Oct 17 17:07:05.562217 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]     self.instance.save()
+[Sun Oct 17 17:07:05.562224 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]   File "/savechumphon/django/savecmpo/main/models.py", line 73, in save
+[Sun Oct 17 17:07:05.562230 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]     return super(Savecmpo, self).save(*args, **kwargs)
+[Sun Oct 17 17:07:05.562237 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 727, in save
+[Sun Oct 17 17:07:05.562243 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]     force_update=force_update, update_fields=update_fields)
+[Sun Oct 17 17:07:05.562250 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 765, in save_base
+[Sun Oct 17 17:07:05.562269 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]     force_update, using, update_fields,
+[Sun Oct 17 17:07:05.562276 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 868, in _save_table
+[Sun Oct 17 17:07:05.562282 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]     results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+[Sun Oct 17 17:07:05.562289 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 908, in _do_insert
+[Sun Oct 17 17:07:05.562295 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]     using=using, raw=raw,
+[Sun Oct 17 17:07:05.562301 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+[Sun Oct 17 17:07:05.562307 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]     return getattr(self.get_queryset(), name)(*args, **kwargs)
+[Sun Oct 17 17:07:05.562313 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1270, in _insert
+[Sun Oct 17 17:07:05.562319 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]     return query.get_compiler(using=using).execute_sql(returning_fields)
+[Sun Oct 17 17:07:05.562325 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+[Sun Oct 17 17:07:05.562332 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]     for sql, params in self.as_sql():
+[Sun Oct 17 17:07:05.562337 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+[Sun Oct 17 17:07:05.562344 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]     for obj in self.query.objs
+[Sun Oct 17 17:07:05.562349 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+[Sun Oct 17 17:07:05.562355 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]     for obj in self.query.objs
+[Sun Oct 17 17:07:05.562361 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+[Sun Oct 17 17:07:05.562367 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]     [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+[Sun Oct 17 17:07:05.562373 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1310, in pre_save_val
+[Sun Oct 17 17:07:05.562379 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]     return field.pre_save(obj, add=True)
+[Sun Oct 17 17:07:05.562385 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 302, in pre_save
+[Sun Oct 17 17:07:05.562391 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]     file.save(file.name, file.file, save=False)
+[Sun Oct 17 17:07:05.562397 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 89, in save
+[Sun Oct 17 17:07:05.562408 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]     self.name = self.storage.save(name, content, max_length=self.field.max_length)
+[Sun Oct 17 17:07:05.562415 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 54, in save
+[Sun Oct 17 17:07:05.562421 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]     return self._save(name, content)
+[Sun Oct 17 17:07:05.562427 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 255, in _save
+[Sun Oct 17 17:07:05.562433 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]     os.makedirs(directory, exist_ok=True)
+[Sun Oct 17 17:07:05.562439 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]   File "/usr/lib/python3.6/os.py", line 220, in makedirs
+[Sun Oct 17 17:07:05.562445 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452]     mkdir(name, mode)
+[Sun Oct 17 17:07:05.562452 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452] PermissionError: [Errno 13] Permission denied: '/media/vaccine_pic'
+[Sun Oct 17 17:07:05.562464 2021] [wsgi:error] [pid 4505:tid 140235433420544] [remote 58.11.93.75:59452] 
+[Sun Oct 17 17:11:52.710102 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237] Session data corrupted
+[Sun Oct 17 17:11:52.807431 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237] Internal Server Error: /
+[Sun Oct 17 17:11:52.807454 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237] Traceback (most recent call last):
+[Sun Oct 17 17:11:52.807462 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+[Sun Oct 17 17:11:52.807469 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]     response = get_response(request)
+[Sun Oct 17 17:11:52.807475 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+[Sun Oct 17 17:11:52.807482 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Sun Oct 17 17:11:52.807489 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]   File "/savechumphon/django/savecmpo/main/views.py", line 13, in Home
+[Sun Oct 17 17:11:52.807496 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]     form.save()
+[Sun Oct 17 17:11:52.807502 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]   File "/savechumphon/venv/lib/python3.6/site-packages/django/forms/models.py", line 468, in save
+[Sun Oct 17 17:11:52.807509 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]     self.instance.save()
+[Sun Oct 17 17:11:52.807515 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]   File "/savechumphon/django/savecmpo/main/models.py", line 73, in save
+[Sun Oct 17 17:11:52.807522 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]     return super(Savecmpo, self).save(*args, **kwargs)
+[Sun Oct 17 17:11:52.807528 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 727, in save
+[Sun Oct 17 17:11:52.807535 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]     force_update=force_update, update_fields=update_fields)
+[Sun Oct 17 17:11:52.807556 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 765, in save_base
+[Sun Oct 17 17:11:52.807562 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]     force_update, using, update_fields,
+[Sun Oct 17 17:11:52.807568 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 868, in _save_table
+[Sun Oct 17 17:11:52.807574 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]     results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+[Sun Oct 17 17:11:52.807581 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 908, in _do_insert
+[Sun Oct 17 17:11:52.807587 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]     using=using, raw=raw,
+[Sun Oct 17 17:11:52.807593 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+[Sun Oct 17 17:11:52.807599 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]     return getattr(self.get_queryset(), name)(*args, **kwargs)
+[Sun Oct 17 17:11:52.807605 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1270, in _insert
+[Sun Oct 17 17:11:52.807611 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]     return query.get_compiler(using=using).execute_sql(returning_fields)
+[Sun Oct 17 17:11:52.807617 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+[Sun Oct 17 17:11:52.807623 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]     for sql, params in self.as_sql():
+[Sun Oct 17 17:11:52.807628 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+[Sun Oct 17 17:11:52.807634 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]     for obj in self.query.objs
+[Sun Oct 17 17:11:52.807640 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+[Sun Oct 17 17:11:52.807646 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]     for obj in self.query.objs
+[Sun Oct 17 17:11:52.807652 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+[Sun Oct 17 17:11:52.807658 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]     [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+[Sun Oct 17 17:11:52.807664 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1310, in pre_save_val
+[Sun Oct 17 17:11:52.807670 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]     return field.pre_save(obj, add=True)
+[Sun Oct 17 17:11:52.807676 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 302, in pre_save
+[Sun Oct 17 17:11:52.807682 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]     file.save(file.name, file.file, save=False)
+[Sun Oct 17 17:11:52.807693 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 89, in save
+[Sun Oct 17 17:11:52.807700 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]     self.name = self.storage.save(name, content, max_length=self.field.max_length)
+[Sun Oct 17 17:11:52.807706 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 54, in save
+[Sun Oct 17 17:11:52.807712 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]     return self._save(name, content)
+[Sun Oct 17 17:11:52.807718 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 255, in _save
+[Sun Oct 17 17:11:52.807724 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]     os.makedirs(directory, exist_ok=True)
+[Sun Oct 17 17:11:52.807730 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]   File "/usr/lib/python3.6/os.py", line 220, in makedirs
+[Sun Oct 17 17:11:52.807736 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237]     mkdir(name, mode)
+[Sun Oct 17 17:11:52.807744 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237] PermissionError: [Errno 13] Permission denied: '/media/vaccine_pic'
+[Sun Oct 17 17:11:52.807755 2021] [wsgi:error] [pid 4505:tid 140235492226816] [remote 58.11.93.75:58237] 
+Exception ignored in: <bound method BaseEventLoop.__del__ of <_UnixSelectorEventLoop running=False closed=False debug=False>>
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/asyncio/base_events.py", line 526, in __del__
+NameError: name 'ResourceWarning' is not defined
+[Sun Oct 17 17:17:20.588775 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:53544] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 17:17:20.913537 2021] [wsgi:error] [pid 5033:tid 139832865896192] [remote 58.11.93.75:50902] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 17:17:51.281453 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287] Session data corrupted
+[Sun Oct 17 17:17:51.381020 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287] Internal Server Error: /
+[Sun Oct 17 17:17:51.381044 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287] Traceback (most recent call last):
+[Sun Oct 17 17:17:51.381052 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+[Sun Oct 17 17:17:51.381060 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]     response = get_response(request)
+[Sun Oct 17 17:17:51.381070 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+[Sun Oct 17 17:17:51.381077 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Sun Oct 17 17:17:51.381084 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]   File "/savechumphon/django/savecmpo/main/views.py", line 13, in Home
+[Sun Oct 17 17:17:51.381091 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]     form.save()
+[Sun Oct 17 17:17:51.381098 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]   File "/savechumphon/venv/lib/python3.6/site-packages/django/forms/models.py", line 468, in save
+[Sun Oct 17 17:17:51.381105 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]     self.instance.save()
+[Sun Oct 17 17:17:51.381112 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]   File "/savechumphon/django/savecmpo/main/models.py", line 73, in save
+[Sun Oct 17 17:17:51.381132 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]     return super(Savecmpo, self).save(*args, **kwargs)
+[Sun Oct 17 17:17:51.381139 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 727, in save
+[Sun Oct 17 17:17:51.381146 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]     force_update=force_update, update_fields=update_fields)
+[Sun Oct 17 17:17:51.381152 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 765, in save_base
+[Sun Oct 17 17:17:51.381159 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]     force_update, using, update_fields,
+[Sun Oct 17 17:17:51.381165 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 868, in _save_table
+[Sun Oct 17 17:17:51.381172 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]     results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+[Sun Oct 17 17:17:51.381178 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 908, in _do_insert
+[Sun Oct 17 17:17:51.381185 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]     using=using, raw=raw,
+[Sun Oct 17 17:17:51.381191 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+[Sun Oct 17 17:17:51.381198 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]     return getattr(self.get_queryset(), name)(*args, **kwargs)
+[Sun Oct 17 17:17:51.381204 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1270, in _insert
+[Sun Oct 17 17:17:51.381211 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]     return query.get_compiler(using=using).execute_sql(returning_fields)
+[Sun Oct 17 17:17:51.381217 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+[Sun Oct 17 17:17:51.381224 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]     for sql, params in self.as_sql():
+[Sun Oct 17 17:17:51.381230 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+[Sun Oct 17 17:17:51.381237 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]     for obj in self.query.objs
+[Sun Oct 17 17:17:51.381243 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+[Sun Oct 17 17:17:51.381250 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]     for obj in self.query.objs
+[Sun Oct 17 17:17:51.381256 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+[Sun Oct 17 17:17:51.381262 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]     [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+[Sun Oct 17 17:17:51.381269 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1310, in pre_save_val
+[Sun Oct 17 17:17:51.381281 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]     return field.pre_save(obj, add=True)
+[Sun Oct 17 17:17:51.381288 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 302, in pre_save
+[Sun Oct 17 17:17:51.381294 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]     file.save(file.name, file.file, save=False)
+[Sun Oct 17 17:17:51.381301 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 89, in save
+[Sun Oct 17 17:17:51.381307 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]     self.name = self.storage.save(name, content, max_length=self.field.max_length)
+[Sun Oct 17 17:17:51.381314 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 54, in save
+[Sun Oct 17 17:17:51.381320 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]     return self._save(name, content)
+[Sun Oct 17 17:17:51.381327 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 255, in _save
+[Sun Oct 17 17:17:51.381333 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]     os.makedirs(directory, exist_ok=True)
+[Sun Oct 17 17:17:51.381339 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]   File "/usr/lib/python3.6/os.py", line 220, in makedirs
+[Sun Oct 17 17:17:51.381345 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287]     mkdir(name, mode)
+[Sun Oct 17 17:17:51.381355 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287] PermissionError: [Errno 13] Permission denied: '/media/vaccine_pic'
+[Sun Oct 17 17:17:51.381367 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:59287] 
+[Sun Oct 17 17:21:29.411430 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199] Session data corrupted
+[Sun Oct 17 17:21:29.506873 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199] Internal Server Error: /
+[Sun Oct 17 17:21:29.506896 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199] Traceback (most recent call last):
+[Sun Oct 17 17:21:29.506904 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+[Sun Oct 17 17:21:29.506912 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]     response = get_response(request)
+[Sun Oct 17 17:21:29.506918 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+[Sun Oct 17 17:21:29.506925 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Sun Oct 17 17:21:29.506931 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]   File "/savechumphon/django/savecmpo/main/views.py", line 13, in Home
+[Sun Oct 17 17:21:29.506938 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]     form.save()
+[Sun Oct 17 17:21:29.506944 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]   File "/savechumphon/venv/lib/python3.6/site-packages/django/forms/models.py", line 468, in save
+[Sun Oct 17 17:21:29.506951 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]     self.instance.save()
+[Sun Oct 17 17:21:29.506983 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]   File "/savechumphon/django/savecmpo/main/models.py", line 73, in save
+[Sun Oct 17 17:21:29.506991 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]     return super(Savecmpo, self).save(*args, **kwargs)
+[Sun Oct 17 17:21:29.506998 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 727, in save
+[Sun Oct 17 17:21:29.507004 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]     force_update=force_update, update_fields=update_fields)
+[Sun Oct 17 17:21:29.507009 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 765, in save_base
+[Sun Oct 17 17:21:29.507015 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]     force_update, using, update_fields,
+[Sun Oct 17 17:21:29.507021 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 868, in _save_table
+[Sun Oct 17 17:21:29.507027 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]     results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+[Sun Oct 17 17:21:29.507033 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 908, in _do_insert
+[Sun Oct 17 17:21:29.507039 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]     using=using, raw=raw,
+[Sun Oct 17 17:21:29.507045 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+[Sun Oct 17 17:21:29.507051 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]     return getattr(self.get_queryset(), name)(*args, **kwargs)
+[Sun Oct 17 17:21:29.507057 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1270, in _insert
+[Sun Oct 17 17:21:29.507063 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]     return query.get_compiler(using=using).execute_sql(returning_fields)
+[Sun Oct 17 17:21:29.507069 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+[Sun Oct 17 17:21:29.507075 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]     for sql, params in self.as_sql():
+[Sun Oct 17 17:21:29.507081 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+[Sun Oct 17 17:21:29.507087 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]     for obj in self.query.objs
+[Sun Oct 17 17:21:29.507092 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+[Sun Oct 17 17:21:29.507098 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]     for obj in self.query.objs
+[Sun Oct 17 17:21:29.507104 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+[Sun Oct 17 17:21:29.507110 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]     [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+[Sun Oct 17 17:21:29.507116 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1310, in pre_save_val
+[Sun Oct 17 17:21:29.507128 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]     return field.pre_save(obj, add=True)
+[Sun Oct 17 17:21:29.507134 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 302, in pre_save
+[Sun Oct 17 17:21:29.507140 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]     file.save(file.name, file.file, save=False)
+[Sun Oct 17 17:21:29.507146 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 89, in save
+[Sun Oct 17 17:21:29.507152 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]     self.name = self.storage.save(name, content, max_length=self.field.max_length)
+[Sun Oct 17 17:21:29.507158 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 54, in save
+[Sun Oct 17 17:21:29.507164 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]     return self._save(name, content)
+[Sun Oct 17 17:21:29.507169 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 255, in _save
+[Sun Oct 17 17:21:29.507175 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]     os.makedirs(directory, exist_ok=True)
+[Sun Oct 17 17:21:29.507181 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]   File "/usr/lib/python3.6/os.py", line 220, in makedirs
+[Sun Oct 17 17:21:29.507187 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199]     mkdir(name, mode)
+[Sun Oct 17 17:21:29.507196 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199] PermissionError: [Errno 13] Permission denied: '/media/vaccine_pic'
+[Sun Oct 17 17:21:29.507208 2021] [wsgi:error] [pid 5033:tid 139832874288896] [remote 58.11.93.75:49199] 
+Exception ignored in: <bound method BaseEventLoop.__del__ of <_UnixSelectorEventLoop running=False closed=False debug=False>>
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/asyncio/base_events.py", line 526, in __del__
+NameError: name 'ResourceWarning' is not defined
+[Sun Oct 17 17:47:27.789863 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:60368] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 17:47:28.188482 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:60368] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 17:48:55.815441 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55674] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 17:48:56.707545 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:58225] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 17:48:56.814537 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:58225] Not Found: /favicon.ico
+[Sun Oct 17 17:50:09.624740 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636] Internal Server Error: /
+[Sun Oct 17 17:50:09.624791 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636] Traceback (most recent call last):
+[Sun Oct 17 17:50:09.624800 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+[Sun Oct 17 17:50:09.624808 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]     response = get_response(request)
+[Sun Oct 17 17:50:09.624815 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+[Sun Oct 17 17:50:09.624838 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Sun Oct 17 17:50:09.624845 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]   File "/savechumphon/django/savecmpo/main/views.py", line 13, in Home
+[Sun Oct 17 17:50:09.624852 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]     form.save()
+[Sun Oct 17 17:50:09.624858 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]   File "/savechumphon/venv/lib/python3.6/site-packages/django/forms/models.py", line 468, in save
+[Sun Oct 17 17:50:09.624864 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]     self.instance.save()
+[Sun Oct 17 17:50:09.624870 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]   File "/savechumphon/django/savecmpo/main/models.py", line 73, in save
+[Sun Oct 17 17:50:09.624876 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]     return super(Savecmpo, self).save(*args, **kwargs)
+[Sun Oct 17 17:50:09.624882 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 727, in save
+[Sun Oct 17 17:50:09.624888 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]     force_update=force_update, update_fields=update_fields)
+[Sun Oct 17 17:50:09.624894 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 765, in save_base
+[Sun Oct 17 17:50:09.624900 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]     force_update, using, update_fields,
+[Sun Oct 17 17:50:09.624906 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 868, in _save_table
+[Sun Oct 17 17:50:09.624912 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]     results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+[Sun Oct 17 17:50:09.624918 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 908, in _do_insert
+[Sun Oct 17 17:50:09.624924 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]     using=using, raw=raw,
+[Sun Oct 17 17:50:09.624930 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+[Sun Oct 17 17:50:09.624936 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]     return getattr(self.get_queryset(), name)(*args, **kwargs)
+[Sun Oct 17 17:50:09.624942 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1270, in _insert
+[Sun Oct 17 17:50:09.624948 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]     return query.get_compiler(using=using).execute_sql(returning_fields)
+[Sun Oct 17 17:50:09.624954 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+[Sun Oct 17 17:50:09.624960 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]     for sql, params in self.as_sql():
+[Sun Oct 17 17:50:09.624966 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+[Sun Oct 17 17:50:09.624977 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]     for obj in self.query.objs
+[Sun Oct 17 17:50:09.624984 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+[Sun Oct 17 17:50:09.624990 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]     for obj in self.query.objs
+[Sun Oct 17 17:50:09.624996 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+[Sun Oct 17 17:50:09.625002 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]     [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+[Sun Oct 17 17:50:09.625008 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1310, in pre_save_val
+[Sun Oct 17 17:50:09.625014 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]     return field.pre_save(obj, add=True)
+[Sun Oct 17 17:50:09.625020 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 302, in pre_save
+[Sun Oct 17 17:50:09.625026 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]     file.save(file.name, file.file, save=False)
+[Sun Oct 17 17:50:09.625032 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 89, in save
+[Sun Oct 17 17:50:09.625038 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]     self.name = self.storage.save(name, content, max_length=self.field.max_length)
+[Sun Oct 17 17:50:09.625045 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 54, in save
+[Sun Oct 17 17:50:09.625051 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]     return self._save(name, content)
+[Sun Oct 17 17:50:09.625057 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 255, in _save
+[Sun Oct 17 17:50:09.625063 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]     os.makedirs(directory, exist_ok=True)
+[Sun Oct 17 17:50:09.625069 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]   File "/usr/lib/python3.6/os.py", line 220, in makedirs
+[Sun Oct 17 17:50:09.625075 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636]     mkdir(name, mode)
+[Sun Oct 17 17:50:09.625083 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636] PermissionError: [Errno 13] Permission denied: '/media/vaccine_pic'
+[Sun Oct 17 17:50:09.625096 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:59636] 
+[Sun Oct 17 17:51:18.501278 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854] Internal Server Error: /
+[Sun Oct 17 17:51:18.501326 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854] Traceback (most recent call last):
+[Sun Oct 17 17:51:18.501335 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+[Sun Oct 17 17:51:18.501342 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]     response = get_response(request)
+[Sun Oct 17 17:51:18.501349 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+[Sun Oct 17 17:51:18.501372 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Sun Oct 17 17:51:18.501380 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]   File "/savechumphon/django/savecmpo/main/views.py", line 13, in Home
+[Sun Oct 17 17:51:18.501386 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]     form.save()
+[Sun Oct 17 17:51:18.501392 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]   File "/savechumphon/venv/lib/python3.6/site-packages/django/forms/models.py", line 468, in save
+[Sun Oct 17 17:51:18.501398 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]     self.instance.save()
+[Sun Oct 17 17:51:18.501404 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]   File "/savechumphon/django/savecmpo/main/models.py", line 73, in save
+[Sun Oct 17 17:51:18.501410 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]     return super(Savecmpo, self).save(*args, **kwargs)
+[Sun Oct 17 17:51:18.501416 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 727, in save
+[Sun Oct 17 17:51:18.501422 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]     force_update=force_update, update_fields=update_fields)
+[Sun Oct 17 17:51:18.501428 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 765, in save_base
+[Sun Oct 17 17:51:18.501435 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]     force_update, using, update_fields,
+[Sun Oct 17 17:51:18.501441 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 868, in _save_table
+[Sun Oct 17 17:51:18.501447 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]     results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+[Sun Oct 17 17:51:18.501453 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 908, in _do_insert
+[Sun Oct 17 17:51:18.501459 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]     using=using, raw=raw,
+[Sun Oct 17 17:51:18.501465 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+[Sun Oct 17 17:51:18.501471 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]     return getattr(self.get_queryset(), name)(*args, **kwargs)
+[Sun Oct 17 17:51:18.501477 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1270, in _insert
+[Sun Oct 17 17:51:18.501484 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]     return query.get_compiler(using=using).execute_sql(returning_fields)
+[Sun Oct 17 17:51:18.501490 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+[Sun Oct 17 17:51:18.501496 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]     for sql, params in self.as_sql():
+[Sun Oct 17 17:51:18.501502 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+[Sun Oct 17 17:51:18.501508 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]     for obj in self.query.objs
+[Sun Oct 17 17:51:18.501521 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+[Sun Oct 17 17:51:18.501528 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]     for obj in self.query.objs
+[Sun Oct 17 17:51:18.501534 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+[Sun Oct 17 17:51:18.501540 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]     [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+[Sun Oct 17 17:51:18.501546 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1310, in pre_save_val
+[Sun Oct 17 17:51:18.501552 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]     return field.pre_save(obj, add=True)
+[Sun Oct 17 17:51:18.501558 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 302, in pre_save
+[Sun Oct 17 17:51:18.501565 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]     file.save(file.name, file.file, save=False)
+[Sun Oct 17 17:51:18.501571 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 89, in save
+[Sun Oct 17 17:51:18.501577 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]     self.name = self.storage.save(name, content, max_length=self.field.max_length)
+[Sun Oct 17 17:51:18.501583 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 54, in save
+[Sun Oct 17 17:51:18.501589 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]     return self._save(name, content)
+[Sun Oct 17 17:51:18.501595 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 255, in _save
+[Sun Oct 17 17:51:18.501601 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]     os.makedirs(directory, exist_ok=True)
+[Sun Oct 17 17:51:18.501607 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]   File "/usr/lib/python3.6/os.py", line 220, in makedirs
+[Sun Oct 17 17:51:18.501613 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854]     mkdir(name, mode)
+[Sun Oct 17 17:51:18.501622 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854] PermissionError: [Errno 13] Permission denied: '/media/sickness'
+[Sun Oct 17 17:51:18.501635 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:53854] 
+[Sun Oct 17 17:56:52.842882 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790] Session data corrupted
+[Sun Oct 17 17:56:52.938043 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790] Internal Server Error: /
+[Sun Oct 17 17:56:52.938067 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790] Traceback (most recent call last):
+[Sun Oct 17 17:56:52.938075 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+[Sun Oct 17 17:56:52.938082 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]     response = get_response(request)
+[Sun Oct 17 17:56:52.938089 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+[Sun Oct 17 17:56:52.938108 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Sun Oct 17 17:56:52.938115 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]   File "/savechumphon/django/savecmpo/main/views.py", line 13, in Home
+[Sun Oct 17 17:56:52.938121 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]     form.save()
+[Sun Oct 17 17:56:52.938127 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]   File "/savechumphon/venv/lib/python3.6/site-packages/django/forms/models.py", line 468, in save
+[Sun Oct 17 17:56:52.938134 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]     self.instance.save()
+[Sun Oct 17 17:56:52.938140 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]   File "/savechumphon/django/savecmpo/main/models.py", line 73, in save
+[Sun Oct 17 17:56:52.938146 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]     return super(Savecmpo, self).save(*args, **kwargs)
+[Sun Oct 17 17:56:52.938152 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 727, in save
+[Sun Oct 17 17:56:52.938158 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]     force_update=force_update, update_fields=update_fields)
+[Sun Oct 17 17:56:52.938164 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 765, in save_base
+[Sun Oct 17 17:56:52.938170 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]     force_update, using, update_fields,
+[Sun Oct 17 17:56:52.938176 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 868, in _save_table
+[Sun Oct 17 17:56:52.938182 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]     results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+[Sun Oct 17 17:56:52.938188 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 908, in _do_insert
+[Sun Oct 17 17:56:52.938194 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]     using=using, raw=raw,
+[Sun Oct 17 17:56:52.938200 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+[Sun Oct 17 17:56:52.938206 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]     return getattr(self.get_queryset(), name)(*args, **kwargs)
+[Sun Oct 17 17:56:52.938212 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1270, in _insert
+[Sun Oct 17 17:56:52.938219 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]     return query.get_compiler(using=using).execute_sql(returning_fields)
+[Sun Oct 17 17:56:52.938225 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+[Sun Oct 17 17:56:52.938231 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]     for sql, params in self.as_sql():
+[Sun Oct 17 17:56:52.938237 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+[Sun Oct 17 17:56:52.938260 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]     for obj in self.query.objs
+[Sun Oct 17 17:56:52.938267 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+[Sun Oct 17 17:56:52.938273 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]     for obj in self.query.objs
+[Sun Oct 17 17:56:52.938279 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+[Sun Oct 17 17:56:52.938285 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]     [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+[Sun Oct 17 17:56:52.938291 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1310, in pre_save_val
+[Sun Oct 17 17:56:52.938297 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]     return field.pre_save(obj, add=True)
+[Sun Oct 17 17:56:52.938302 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 302, in pre_save
+[Sun Oct 17 17:56:52.938308 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]     file.save(file.name, file.file, save=False)
+[Sun Oct 17 17:56:52.938314 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 89, in save
+[Sun Oct 17 17:56:52.938320 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]     self.name = self.storage.save(name, content, max_length=self.field.max_length)
+[Sun Oct 17 17:56:52.938326 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 54, in save
+[Sun Oct 17 17:56:52.938354 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]     return self._save(name, content)
+[Sun Oct 17 17:56:52.938361 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 255, in _save
+[Sun Oct 17 17:56:52.938367 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]     os.makedirs(directory, exist_ok=True)
+[Sun Oct 17 17:56:52.938373 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]   File "/usr/lib/python3.6/os.py", line 220, in makedirs
+[Sun Oct 17 17:56:52.938379 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790]     mkdir(name, mode)
+[Sun Oct 17 17:56:52.938388 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790] PermissionError: [Errno 13] Permission denied: '/media/sickness'
+[Sun Oct 17 17:56:52.938402 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:55790] 
+[Sun Oct 17 17:58:41.876387 2021] [wsgi:error] [pid 2320:tid 140171155965696] [remote 58.11.93.75:63948] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 17:58:42.251393 2021] [wsgi:error] [pid 2320:tid 140171197953792] [remote 58.11.93.75:60270] Not Found: /assets/js/breakpoints.min.js
+Exception ignored in: <bound method BaseEventLoop.__del__ of <_UnixSelectorEventLoop running=False closed=False debug=False>>
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/asyncio/base_events.py", line 526, in __del__
+NameError: name 'ResourceWarning' is not defined
+[Sun Oct 17 18:14:47.891609 2021] [wsgi:error] [pid 1723:tid 140148246312704] [remote 58.11.93.75:50664] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 18:14:48.267817 2021] [wsgi:error] [pid 1723:tid 140148363892480] [remote 58.11.93.75:50664] Not Found: /assets/js/breakpoints.min.js
+Exception ignored in: <bound method BaseEventLoop.__del__ of <_UnixSelectorEventLoop running=False closed=False debug=False>>
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/asyncio/base_events.py", line 526, in __del__
+NameError: name 'ResourceWarning' is not defined
+[Sun Oct 17 18:26:34.376602 2021] [wsgi:error] [pid 2627:tid 140388704028416] [remote 58.11.93.75:61442] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 18:37:58.542807 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:55321] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 18:37:58.904198 2021] [wsgi:error] [pid 2627:tid 140388704028416] [remote 58.11.93.75:49496] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 18:42:26.444254 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:61987] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 18:42:26.685129 2021] [wsgi:error] [pid 2627:tid 140388704028416] [remote 58.11.93.75:59512] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 18:42:26.756089 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:59512] Not Found: /favicon.ico
+[Sun Oct 17 18:42:59.022260 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272] Internal Server Error: /
+[Sun Oct 17 18:42:59.022314 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272] Traceback (most recent call last):
+[Sun Oct 17 18:42:59.022323 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+[Sun Oct 17 18:42:59.022330 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]     response = get_response(request)
+[Sun Oct 17 18:42:59.022337 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+[Sun Oct 17 18:42:59.022344 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Sun Oct 17 18:42:59.022350 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]   File "/savechumphon/django/savecmpo/main/views.py", line 13, in Home
+[Sun Oct 17 18:42:59.022357 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]     form.save()
+[Sun Oct 17 18:42:59.022363 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]   File "/savechumphon/venv/lib/python3.6/site-packages/django/forms/models.py", line 468, in save
+[Sun Oct 17 18:42:59.022370 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]     self.instance.save()
+[Sun Oct 17 18:42:59.022376 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]   File "/savechumphon/django/savecmpo/main/models.py", line 73, in save
+[Sun Oct 17 18:42:59.022382 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]     return super(Savecmpo, self).save(*args, **kwargs)
+[Sun Oct 17 18:42:59.022389 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 727, in save
+[Sun Oct 17 18:42:59.022395 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]     force_update=force_update, update_fields=update_fields)
+[Sun Oct 17 18:42:59.022402 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 765, in save_base
+[Sun Oct 17 18:42:59.022409 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]     force_update, using, update_fields,
+[Sun Oct 17 18:42:59.022415 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 868, in _save_table
+[Sun Oct 17 18:42:59.022435 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]     results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+[Sun Oct 17 18:42:59.022442 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 908, in _do_insert
+[Sun Oct 17 18:42:59.022448 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]     using=using, raw=raw,
+[Sun Oct 17 18:42:59.022454 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+[Sun Oct 17 18:42:59.022460 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]     return getattr(self.get_queryset(), name)(*args, **kwargs)
+[Sun Oct 17 18:42:59.022466 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1270, in _insert
+[Sun Oct 17 18:42:59.022472 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]     return query.get_compiler(using=using).execute_sql(returning_fields)
+[Sun Oct 17 18:42:59.022478 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+[Sun Oct 17 18:42:59.022484 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]     for sql, params in self.as_sql():
+[Sun Oct 17 18:42:59.022489 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+[Sun Oct 17 18:42:59.022495 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]     for obj in self.query.objs
+[Sun Oct 17 18:42:59.022501 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+[Sun Oct 17 18:42:59.022507 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]     for obj in self.query.objs
+[Sun Oct 17 18:42:59.022513 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+[Sun Oct 17 18:42:59.022519 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]     [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+[Sun Oct 17 18:42:59.022525 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1310, in pre_save_val
+[Sun Oct 17 18:42:59.022531 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]     return field.pre_save(obj, add=True)
+[Sun Oct 17 18:42:59.022536 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 302, in pre_save
+[Sun Oct 17 18:42:59.022542 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]     file.save(file.name, file.file, save=False)
+[Sun Oct 17 18:42:59.022548 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 89, in save
+[Sun Oct 17 18:42:59.022554 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]     self.name = self.storage.save(name, content, max_length=self.field.max_length)
+[Sun Oct 17 18:42:59.022560 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 54, in save
+[Sun Oct 17 18:42:59.022571 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]     return self._save(name, content)
+[Sun Oct 17 18:42:59.022577 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 255, in _save
+[Sun Oct 17 18:42:59.022583 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]     os.makedirs(directory, exist_ok=True)
+[Sun Oct 17 18:42:59.022589 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]   File "/usr/lib/python3.6/os.py", line 220, in makedirs
+[Sun Oct 17 18:42:59.022595 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272]     mkdir(name, mode)
+[Sun Oct 17 18:42:59.022604 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272] PermissionError: [Errno 13] Permission denied: '/media/vaccine_pic'
+[Sun Oct 17 18:42:59.022616 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:60272] 
+[Sun Oct 17 18:48:58.769530 2021] [wsgi:error] [pid 2627:tid 140388704028416] [remote 112.237.209.204:35375] Not Found: /boaform/admin/formLogin
+[Sun Oct 17 18:49:51.440685 2021] [wsgi:error] [pid 2627:tid 140388704028416] [remote 58.11.93.75:54425] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 18:50:24.826420 2021] [wsgi:error] [pid 2627:tid 140388704028416] [remote 58.11.93.75:55685] Not Found: /thank/assets/js/breakpoints.min.js
+[Sun Oct 17 18:57:56.442733 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919] Internal Server Error: /
+[Sun Oct 17 18:57:56.442785 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919] Traceback (most recent call last):
+[Sun Oct 17 18:57:56.442794 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+[Sun Oct 17 18:57:56.442801 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]     response = get_response(request)
+[Sun Oct 17 18:57:56.442807 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+[Sun Oct 17 18:57:56.442814 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Sun Oct 17 18:57:56.442820 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]   File "/savechumphon/django/savecmpo/main/views.py", line 13, in Home
+[Sun Oct 17 18:57:56.442827 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]     form.save()
+[Sun Oct 17 18:57:56.442833 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]   File "/savechumphon/venv/lib/python3.6/site-packages/django/forms/models.py", line 468, in save
+[Sun Oct 17 18:57:56.442839 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]     self.instance.save()
+[Sun Oct 17 18:57:56.442846 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]   File "/savechumphon/django/savecmpo/main/models.py", line 73, in save
+[Sun Oct 17 18:57:56.442852 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]     return super(Savecmpo, self).save(*args, **kwargs)
+[Sun Oct 17 18:57:56.442858 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 727, in save
+[Sun Oct 17 18:57:56.442865 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]     force_update=force_update, update_fields=update_fields)
+[Sun Oct 17 18:57:56.442871 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 765, in save_base
+[Sun Oct 17 18:57:56.442893 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]     force_update, using, update_fields,
+[Sun Oct 17 18:57:56.442899 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 868, in _save_table
+[Sun Oct 17 18:57:56.442905 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]     results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+[Sun Oct 17 18:57:56.442911 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 908, in _do_insert
+[Sun Oct 17 18:57:56.442917 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]     using=using, raw=raw,
+[Sun Oct 17 18:57:56.442923 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+[Sun Oct 17 18:57:56.442929 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]     return getattr(self.get_queryset(), name)(*args, **kwargs)
+[Sun Oct 17 18:57:56.442935 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1270, in _insert
+[Sun Oct 17 18:57:56.442940 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]     return query.get_compiler(using=using).execute_sql(returning_fields)
+[Sun Oct 17 18:57:56.442946 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+[Sun Oct 17 18:57:56.442952 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]     for sql, params in self.as_sql():
+[Sun Oct 17 18:57:56.442958 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+[Sun Oct 17 18:57:56.442964 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]     for obj in self.query.objs
+[Sun Oct 17 18:57:56.442969 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+[Sun Oct 17 18:57:56.442975 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]     for obj in self.query.objs
+[Sun Oct 17 18:57:56.442981 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+[Sun Oct 17 18:57:56.442987 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]     [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+[Sun Oct 17 18:57:56.442992 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1310, in pre_save_val
+[Sun Oct 17 18:57:56.442998 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]     return field.pre_save(obj, add=True)
+[Sun Oct 17 18:57:56.443004 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 302, in pre_save
+[Sun Oct 17 18:57:56.443010 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]     file.save(file.name, file.file, save=False)
+[Sun Oct 17 18:57:56.443015 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 89, in save
+[Sun Oct 17 18:57:56.443026 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]     self.name = self.storage.save(name, content, max_length=self.field.max_length)
+[Sun Oct 17 18:57:56.443033 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 54, in save
+[Sun Oct 17 18:57:56.443039 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]     return self._save(name, content)
+[Sun Oct 17 18:57:56.443044 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 255, in _save
+[Sun Oct 17 18:57:56.443050 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]     os.makedirs(directory, exist_ok=True)
+[Sun Oct 17 18:57:56.443056 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]   File "/usr/lib/python3.6/os.py", line 220, in makedirs
+[Sun Oct 17 18:57:56.443061 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919]     mkdir(name, mode)
+[Sun Oct 17 18:57:56.443069 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919] PermissionError: [Errno 13] Permission denied: '/media/vaccine_pic'
+[Sun Oct 17 18:57:56.443081 2021] [wsgi:error] [pid 2627:tid 140388695627520] [remote 58.11.93.75:64919] 
+Exception ignored in: <bound method BaseEventLoop.__del__ of <_UnixSelectorEventLoop running=False closed=False debug=False>>
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/asyncio/base_events.py", line 526, in __del__
+NameError: name 'ResourceWarning' is not defined
+[Sun Oct 17 19:01:57.125827 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:59994] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 19:01:57.398266 2021] [wsgi:error] [pid 1767:tid 140432966424320] [remote 58.11.93.75:55466] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 19:01:57.575319 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:64807] Not Found: /favicon.ico
+[Sun Oct 17 19:03:27.236569 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:64399] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 19:03:27.386406 2021] [wsgi:error] [pid 1767:tid 140432966424320] [remote 58.11.93.75:53308] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 19:03:56.009989 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698] Session data corrupted
+[Sun Oct 17 19:03:56.110464 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698] Internal Server Error: /
+[Sun Oct 17 19:03:56.110495 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698] Traceback (most recent call last):
+[Sun Oct 17 19:03:56.110504 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+[Sun Oct 17 19:03:56.110511 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]     response = get_response(request)
+[Sun Oct 17 19:03:56.110518 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+[Sun Oct 17 19:03:56.110524 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Sun Oct 17 19:03:56.110532 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]   File "/savechumphon/django/savecmpo/main/views.py", line 13, in Home
+[Sun Oct 17 19:03:56.110538 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]     form.save()
+[Sun Oct 17 19:03:56.110544 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]   File "/savechumphon/venv/lib/python3.6/site-packages/django/forms/models.py", line 468, in save
+[Sun Oct 17 19:03:56.110572 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]     self.instance.save()
+[Sun Oct 17 19:03:56.110579 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]   File "/savechumphon/django/savecmpo/main/models.py", line 73, in save
+[Sun Oct 17 19:03:56.110585 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]     return super(Savecmpo, self).save(*args, **kwargs)
+[Sun Oct 17 19:03:56.110591 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 727, in save
+[Sun Oct 17 19:03:56.110597 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]     force_update=force_update, update_fields=update_fields)
+[Sun Oct 17 19:03:56.110603 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 765, in save_base
+[Sun Oct 17 19:03:56.110609 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]     force_update, using, update_fields,
+[Sun Oct 17 19:03:56.110614 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 868, in _save_table
+[Sun Oct 17 19:03:56.110620 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]     results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+[Sun Oct 17 19:03:56.110626 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 908, in _do_insert
+[Sun Oct 17 19:03:56.110632 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]     using=using, raw=raw,
+[Sun Oct 17 19:03:56.110638 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+[Sun Oct 17 19:03:56.110644 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]     return getattr(self.get_queryset(), name)(*args, **kwargs)
+[Sun Oct 17 19:03:56.110650 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1270, in _insert
+[Sun Oct 17 19:03:56.110656 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]     return query.get_compiler(using=using).execute_sql(returning_fields)
+[Sun Oct 17 19:03:56.110662 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+[Sun Oct 17 19:03:56.110668 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]     for sql, params in self.as_sql():
+[Sun Oct 17 19:03:56.110674 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+[Sun Oct 17 19:03:56.110680 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]     for obj in self.query.objs
+[Sun Oct 17 19:03:56.110686 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+[Sun Oct 17 19:03:56.110692 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]     for obj in self.query.objs
+[Sun Oct 17 19:03:56.110697 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+[Sun Oct 17 19:03:56.110709 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]     [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+[Sun Oct 17 19:03:56.110715 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1310, in pre_save_val
+[Sun Oct 17 19:03:56.110721 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]     return field.pre_save(obj, add=True)
+[Sun Oct 17 19:03:56.110727 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 302, in pre_save
+[Sun Oct 17 19:03:56.110733 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]     file.save(file.name, file.file, save=False)
+[Sun Oct 17 19:03:56.110739 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 89, in save
+[Sun Oct 17 19:03:56.110745 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]     self.name = self.storage.save(name, content, max_length=self.field.max_length)
+[Sun Oct 17 19:03:56.110751 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 54, in save
+[Sun Oct 17 19:03:56.110756 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]     return self._save(name, content)
+[Sun Oct 17 19:03:56.110762 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 255, in _save
+[Sun Oct 17 19:03:56.110768 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]     os.makedirs(directory, exist_ok=True)
+[Sun Oct 17 19:03:56.110774 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]   File "/usr/lib/python3.6/os.py", line 220, in makedirs
+[Sun Oct 17 19:03:56.110779 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698]     mkdir(name, mode)
+[Sun Oct 17 19:03:56.110787 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698] PermissionError: [Errno 13] Permission denied: '/media/lab'
+[Sun Oct 17 19:03:56.110799 2021] [wsgi:error] [pid 1767:tid 140432916051712] [remote 58.11.93.75:49698] 
+Exception ignored in: <bound method BaseEventLoop.__del__ of <_UnixSelectorEventLoop running=False closed=False debug=False>>
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/asyncio/base_events.py", line 526, in __del__
+NameError: name 'ResourceWarning' is not defined
+[Sun Oct 17 19:09:09.004722 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:50043] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 19:09:43.147930 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966] Session data corrupted
+[Sun Oct 17 19:09:43.248546 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966] Internal Server Error: /
+[Sun Oct 17 19:09:43.248567 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966] Traceback (most recent call last):
+[Sun Oct 17 19:09:43.248576 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+[Sun Oct 17 19:09:43.248583 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]     response = get_response(request)
+[Sun Oct 17 19:09:43.248590 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+[Sun Oct 17 19:09:43.248597 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Sun Oct 17 19:09:43.248617 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]   File "/savechumphon/django/savecmpo/main/views.py", line 13, in Home
+[Sun Oct 17 19:09:43.248624 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]     form.save()
+[Sun Oct 17 19:09:43.248630 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]   File "/savechumphon/venv/lib/python3.6/site-packages/django/forms/models.py", line 468, in save
+[Sun Oct 17 19:09:43.248637 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]     self.instance.save()
+[Sun Oct 17 19:09:43.248642 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]   File "/savechumphon/django/savecmpo/main/models.py", line 73, in save
+[Sun Oct 17 19:09:43.248649 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]     return super(Savecmpo, self).save(*args, **kwargs)
+[Sun Oct 17 19:09:43.248655 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 727, in save
+[Sun Oct 17 19:09:43.248661 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]     force_update=force_update, update_fields=update_fields)
+[Sun Oct 17 19:09:43.248667 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 765, in save_base
+[Sun Oct 17 19:09:43.248673 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]     force_update, using, update_fields,
+[Sun Oct 17 19:09:43.248679 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 868, in _save_table
+[Sun Oct 17 19:09:43.248685 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]     results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+[Sun Oct 17 19:09:43.248691 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 908, in _do_insert
+[Sun Oct 17 19:09:43.248698 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]     using=using, raw=raw,
+[Sun Oct 17 19:09:43.248703 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+[Sun Oct 17 19:09:43.248710 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]     return getattr(self.get_queryset(), name)(*args, **kwargs)
+[Sun Oct 17 19:09:43.248716 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1270, in _insert
+[Sun Oct 17 19:09:43.248722 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]     return query.get_compiler(using=using).execute_sql(returning_fields)
+[Sun Oct 17 19:09:43.248728 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+[Sun Oct 17 19:09:43.248734 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]     for sql, params in self.as_sql():
+[Sun Oct 17 19:09:43.248740 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+[Sun Oct 17 19:09:43.248746 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]     for obj in self.query.objs
+[Sun Oct 17 19:09:43.248752 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+[Sun Oct 17 19:09:43.248764 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]     for obj in self.query.objs
+[Sun Oct 17 19:09:43.248770 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+[Sun Oct 17 19:09:43.248777 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]     [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+[Sun Oct 17 19:09:43.248783 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1310, in pre_save_val
+[Sun Oct 17 19:09:43.248789 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]     return field.pre_save(obj, add=True)
+[Sun Oct 17 19:09:43.248795 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 302, in pre_save
+[Sun Oct 17 19:09:43.248801 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]     file.save(file.name, file.file, save=False)
+[Sun Oct 17 19:09:43.248807 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 89, in save
+[Sun Oct 17 19:09:43.248813 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]     self.name = self.storage.save(name, content, max_length=self.field.max_length)
+[Sun Oct 17 19:09:43.248819 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 54, in save
+[Sun Oct 17 19:09:43.248825 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]     return self._save(name, content)
+[Sun Oct 17 19:09:43.248831 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 255, in _save
+[Sun Oct 17 19:09:43.248837 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]     os.makedirs(directory, exist_ok=True)
+[Sun Oct 17 19:09:43.248843 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]   File "/usr/lib/python3.6/os.py", line 220, in makedirs
+[Sun Oct 17 19:09:43.248849 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966]     mkdir(name, mode)
+[Sun Oct 17 19:09:43.248857 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966] PermissionError: [Errno 13] Permission denied: '/media/lab'
+[Sun Oct 17 19:09:43.248869 2021] [wsgi:error] [pid 2274:tid 139810889070336] [remote 58.11.93.75:63966] 
+Exception ignored in: <bound method BaseEventLoop.__del__ of <_UnixSelectorEventLoop running=False closed=False debug=False>>
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/asyncio/base_events.py", line 526, in __del__
+NameError: name 'ResourceWarning' is not defined
+[Sun Oct 17 19:13:31.853200 2021] [wsgi:error] [pid 2438:tid 140395255949056] [remote 58.11.93.75:50421] Not Found: /assets/js/breakpoints.min.js
+[Sun Oct 17 19:31:33.336463 2021] [wsgi:error] [pid 2438:tid 140395255949056] [remote 209.141.62.185:33054] Not Found: /config/getuser
+[Sun Oct 17 19:34:24.250381 2021] [wsgi:error] [pid 2438:tid 140395356743424] [remote 209.141.41.12:39598] Not Found: /config/getuser
+[Sun Oct 17 20:31:03.874296 2021] [wsgi:error] [pid 2438:tid 140395255949056] [remote 192.241.204.131:35552] Not Found: /manager/text/list
+[Sun Oct 17 20:56:59.139423 2021] [wsgi:error] [pid 2438:tid 140395255949056] [remote 209.141.32.162:32814] Not Found: /w00tw00t.at.blackhats.romanian.anti-sec:)
+[Sun Oct 17 20:56:59.707771 2021] [wsgi:error] [pid 2438:tid 140395356743424] [remote 209.141.32.162:33746] Not Found: /phpMyAdmin/scripts/setup.php
+[Sun Oct 17 22:23:02.284627 2021] [wsgi:error] [pid 2438:tid 140395255949056] [remote 45.146.164.110:60876] Not Found: /api/jsonws/invoke
+[Sun Oct 17 22:23:02.958393 2021] [wsgi:error] [pid 2438:tid 140395255949056] [remote 45.146.164.110:37938] Not Found: /index.php
+[Sun Oct 17 22:23:04.803828 2021] [wsgi:error] [pid 2438:tid 140395356743424] [remote 45.146.164.110:41882] Not Found: /wp-content/plugins/wp-file-manager/readme.txt
+[Sun Oct 17 22:23:05.459817 2021] [wsgi:error] [pid 2438:tid 140395264349952] [remote 45.146.164.110:47868] Not Found: /solr/admin/info/system
+[Sun Oct 17 22:23:06.095405 2021] [wsgi:error] [pid 2438:tid 140395356743424] [remote 45.146.164.110:46274] Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[Sun Oct 17 22:23:06.733312 2021] [wsgi:error] [pid 2438:tid 140395264349952] [remote 45.146.164.110:42664] Not Found: /console/
+[Sun Oct 17 22:23:07.607745 2021] [wsgi:error] [pid 2438:tid 140395356743424] [remote 45.146.164.110:59874] Not Found: /_ignition/execute-solution
+[Sun Oct 17 22:23:08.361391 2021] [wsgi:error] [pid 2438:tid 140395264349952] [remote 45.146.164.110:51532] Not Found: /Autodiscover/Autodiscover.xml
+[Sun Oct 17 22:29:26.001077 2021] [wsgi:error] [pid 2438:tid 140395264349952] [remote 205.185.113.41:51334] Not Found: /boaform/admin/formLogin
+[Sun Oct 17 22:53:37.450299 2021] [wsgi:error] [pid 2438:tid 140395356743424] [remote 209.141.51.171:57670] Not Found: /boaform/admin/formLogin
+[Sun Oct 17 23:07:56.010640 2021] [wsgi:error] [pid 2438:tid 140395264349952] [remote 209.141.32.162:47672] Not Found: /w00tw00t.at.blackhats.romanian.anti-sec:)
+[Sun Oct 17 23:07:56.705747 2021] [wsgi:error] [pid 2438:tid 140395356743424] [remote 209.141.32.162:48130] Not Found: /phpMyAdmin/scripts/setup.php
+[Sun Oct 17 23:22:41.665813 2021] [wsgi:error] [pid 2438:tid 140395264349952] [remote 192.241.201.191:35736] Not Found: /manager/html
+[Mon Oct 18 00:39:23.561945 2021] [wsgi:error] [pid 2438:tid 140395356743424] [remote 209.141.41.12:53118] Not Found: /config/getuser
+[Mon Oct 18 00:52:37.773320 2021] [wsgi:error] [pid 2438:tid 140395264349952] [remote 66.249.70.6:63883] Not Found: /robots.txt
+[Mon Oct 18 00:52:38.440586 2021] [wsgi:error] [pid 2438:tid 140395356743424] [remote 66.249.70.8:45444] Not Found: /register/
+[Mon Oct 18 03:19:37.648902 2021] [wsgi:error] [pid 2438:tid 140395264349952] [remote 192.241.204.240:38000] Not Found: /portal/redlion
+Exception ignored in: <bound method BaseEventLoop.__del__ of <_UnixSelectorEventLoop running=False closed=False debug=False>>
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/asyncio/base_events.py", line 526, in __del__
+NameError: name 'ResourceWarning' is not defined
+[Mon Oct 18 03:55:31.896073 2021] [wsgi:error] [pid 3949:tid 139864364734208] [remote 192.169.10.254:57390] Not Found: /assets/js/breakpoints.min.js
+[Mon Oct 18 03:55:32.915498 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:54106] Not Found: /assets/js/breakpoints.min.js
+[Mon Oct 18 03:55:33.354987 2021] [wsgi:error] [pid 3949:tid 139864364734208] [remote 192.169.10.254:62317] Not Found: /favicon.ico
+[Mon Oct 18 03:56:23.562497 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:65168] Not Found: /assets/js/breakpoints.min.js
+[Mon Oct 18 03:57:03.638804 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435] Internal Server Error: /
+[Mon Oct 18 03:57:03.638851 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435] Traceback (most recent call last):
+[Mon Oct 18 03:57:03.638857 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+[Mon Oct 18 03:57:03.638862 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]     response = get_response(request)
+[Mon Oct 18 03:57:03.638867 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+[Mon Oct 18 03:57:03.638883 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Mon Oct 18 03:57:03.638888 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]   File "/savechumphon/django/savecmpo/main/views.py", line 13, in Home
+[Mon Oct 18 03:57:03.638892 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]     form.save()
+[Mon Oct 18 03:57:03.638896 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]   File "/savechumphon/venv/lib/python3.6/site-packages/django/forms/models.py", line 468, in save
+[Mon Oct 18 03:57:03.638900 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]     self.instance.save()
+[Mon Oct 18 03:57:03.638904 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]   File "/savechumphon/django/savecmpo/main/models.py", line 73, in save
+[Mon Oct 18 03:57:03.638909 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]     return super(Savecmpo, self).save(*args, **kwargs)
+[Mon Oct 18 03:57:03.638913 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 727, in save
+[Mon Oct 18 03:57:03.638917 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]     force_update=force_update, update_fields=update_fields)
+[Mon Oct 18 03:57:03.638921 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 765, in save_base
+[Mon Oct 18 03:57:03.638925 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]     force_update, using, update_fields,
+[Mon Oct 18 03:57:03.638929 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 868, in _save_table
+[Mon Oct 18 03:57:03.638934 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]     results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+[Mon Oct 18 03:57:03.638938 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 908, in _do_insert
+[Mon Oct 18 03:57:03.638942 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]     using=using, raw=raw,
+[Mon Oct 18 03:57:03.638946 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+[Mon Oct 18 03:57:03.638950 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]     return getattr(self.get_queryset(), name)(*args, **kwargs)
+[Mon Oct 18 03:57:03.638954 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1270, in _insert
+[Mon Oct 18 03:57:03.638959 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]     return query.get_compiler(using=using).execute_sql(returning_fields)
+[Mon Oct 18 03:57:03.638963 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+[Mon Oct 18 03:57:03.638967 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]     for sql, params in self.as_sql():
+[Mon Oct 18 03:57:03.638971 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+[Mon Oct 18 03:57:03.638979 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]     for obj in self.query.objs
+[Mon Oct 18 03:57:03.638983 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+[Mon Oct 18 03:57:03.638988 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]     for obj in self.query.objs
+[Mon Oct 18 03:57:03.638992 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+[Mon Oct 18 03:57:03.638996 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]     [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+[Mon Oct 18 03:57:03.639000 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1310, in pre_save_val
+[Mon Oct 18 03:57:03.639004 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]     return field.pre_save(obj, add=True)
+[Mon Oct 18 03:57:03.639008 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 302, in pre_save
+[Mon Oct 18 03:57:03.639013 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]     file.save(file.name, file.file, save=False)
+[Mon Oct 18 03:57:03.639017 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 89, in save
+[Mon Oct 18 03:57:03.639021 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]     self.name = self.storage.save(name, content, max_length=self.field.max_length)
+[Mon Oct 18 03:57:03.639025 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 54, in save
+[Mon Oct 18 03:57:03.639029 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]     return self._save(name, content)
+[Mon Oct 18 03:57:03.639033 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 255, in _save
+[Mon Oct 18 03:57:03.639037 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]     os.makedirs(directory, exist_ok=True)
+[Mon Oct 18 03:57:03.639041 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]   File "/usr/lib/python3.6/os.py", line 220, in makedirs
+[Mon Oct 18 03:57:03.639045 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435]     mkdir(name, mode)
+[Mon Oct 18 03:57:03.639051 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435] PermissionError: [Errno 13] Permission denied: '/media/vaccine_pic'
+[Mon Oct 18 03:57:03.639060 2021] [wsgi:error] [pid 3949:tid 139864356341504] [remote 192.169.10.254:56435] 
+Exception ignored in: <bound method BaseEventLoop.__del__ of <_UnixSelectorEventLoop running=False closed=False debug=False>>
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/asyncio/base_events.py", line 526, in __del__
+NameError: name 'ResourceWarning' is not defined
+[Mon Oct 18 04:00:10.035562 2021] [wsgi:error] [pid 4085:tid 140052555683584] [remote 192.169.10.254:53914] Not Found: /assets/js/breakpoints.min.js
+[Mon Oct 18 04:00:21.701076 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.241.203.62:55864] Not Found: /actuator/health
+[Mon Oct 18 04:00:42.604044 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175] Internal Server Error: /
+[Mon Oct 18 04:00:42.604108 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175] Traceback (most recent call last):
+[Mon Oct 18 04:00:42.604117 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+[Mon Oct 18 04:00:42.604124 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]     response = get_response(request)
+[Mon Oct 18 04:00:42.604130 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+[Mon Oct 18 04:00:42.604136 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Mon Oct 18 04:00:42.604142 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]   File "/savechumphon/django/savecmpo/main/views.py", line 13, in Home
+[Mon Oct 18 04:00:42.604148 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]     form.save()
+[Mon Oct 18 04:00:42.604154 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]   File "/savechumphon/venv/lib/python3.6/site-packages/django/forms/models.py", line 468, in save
+[Mon Oct 18 04:00:42.604160 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]     self.instance.save()
+[Mon Oct 18 04:00:42.604166 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]   File "/savechumphon/django/savecmpo/main/models.py", line 73, in save
+[Mon Oct 18 04:00:42.604172 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]     return super(Savecmpo, self).save(*args, **kwargs)
+[Mon Oct 18 04:00:42.604178 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 727, in save
+[Mon Oct 18 04:00:42.604184 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]     force_update=force_update, update_fields=update_fields)
+[Mon Oct 18 04:00:42.604190 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 765, in save_base
+[Mon Oct 18 04:00:42.604196 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]     force_update, using, update_fields,
+[Mon Oct 18 04:00:42.604202 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 868, in _save_table
+[Mon Oct 18 04:00:42.604208 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]     results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+[Mon Oct 18 04:00:42.604214 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 908, in _do_insert
+[Mon Oct 18 04:00:42.604220 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]     using=using, raw=raw,
+[Mon Oct 18 04:00:42.604226 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+[Mon Oct 18 04:00:42.604232 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]     return getattr(self.get_queryset(), name)(*args, **kwargs)
+[Mon Oct 18 04:00:42.604238 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1270, in _insert
+[Mon Oct 18 04:00:42.604250 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]     return query.get_compiler(using=using).execute_sql(returning_fields)
+[Mon Oct 18 04:00:42.604256 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+[Mon Oct 18 04:00:42.604263 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]     for sql, params in self.as_sql():
+[Mon Oct 18 04:00:42.604269 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+[Mon Oct 18 04:00:42.604275 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]     for obj in self.query.objs
+[Mon Oct 18 04:00:42.604281 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+[Mon Oct 18 04:00:42.604287 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]     for obj in self.query.objs
+[Mon Oct 18 04:00:42.604293 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+[Mon Oct 18 04:00:42.604299 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]     [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+[Mon Oct 18 04:00:42.604305 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1310, in pre_save_val
+[Mon Oct 18 04:00:42.604311 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]     return field.pre_save(obj, add=True)
+[Mon Oct 18 04:00:42.604317 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 302, in pre_save
+[Mon Oct 18 04:00:42.604323 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]     file.save(file.name, file.file, save=False)
+[Mon Oct 18 04:00:42.604329 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 89, in save
+[Mon Oct 18 04:00:42.604335 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]     self.name = self.storage.save(name, content, max_length=self.field.max_length)
+[Mon Oct 18 04:00:42.604341 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 54, in save
+[Mon Oct 18 04:00:42.604347 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]     return self._save(name, content)
+[Mon Oct 18 04:00:42.604353 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 255, in _save
+[Mon Oct 18 04:00:42.604359 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]     os.makedirs(directory, exist_ok=True)
+[Mon Oct 18 04:00:42.604364 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]   File "/usr/lib/python3.6/os.py", line 220, in makedirs
+[Mon Oct 18 04:00:42.604370 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175]     mkdir(name, mode)
+[Mon Oct 18 04:00:42.604379 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175] PermissionError: [Errno 13] Permission denied: '/media/vaccine_pic'
+[Mon Oct 18 04:00:42.604391 2021] [wsgi:error] [pid 4085:tid 140052547290880] [remote 192.169.10.254:49175] 
+[Mon Oct 18 04:35:48.572510 2021] [wsgi:error] [pid 1665:tid 140481988806400] [remote 192.241.208.45:56420] Not Found: /hudson
+Exception ignored in: <bound method BaseEventLoop.__del__ of <_UnixSelectorEventLoop running=False closed=False debug=False>>
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/asyncio/base_events.py", line 526, in __del__
+NameError: name 'ResourceWarning' is not defined
+[Mon Oct 18 04:39:13.237323 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:53398] Not Found: /assets/js/breakpoints.min.js
+[Mon Oct 18 04:39:49.511299 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515] Internal Server Error: /
+[Mon Oct 18 04:39:49.511350 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515] Traceback (most recent call last):
+[Mon Oct 18 04:39:49.511359 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+[Mon Oct 18 04:39:49.511366 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]     response = get_response(request)
+[Mon Oct 18 04:39:49.511373 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+[Mon Oct 18 04:39:49.511380 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Mon Oct 18 04:39:49.511387 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]   File "/savechumphon/django/savecmpo/main/views.py", line 13, in Home
+[Mon Oct 18 04:39:49.511394 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]     form.save()
+[Mon Oct 18 04:39:49.511400 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]   File "/savechumphon/venv/lib/python3.6/site-packages/django/forms/models.py", line 468, in save
+[Mon Oct 18 04:39:49.511407 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]     self.instance.save()
+[Mon Oct 18 04:39:49.511414 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]   File "/savechumphon/django/savecmpo/main/models.py", line 73, in save
+[Mon Oct 18 04:39:49.511420 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]     return super(Savecmpo, self).save(*args, **kwargs)
+[Mon Oct 18 04:39:49.511427 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 727, in save
+[Mon Oct 18 04:39:49.511433 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]     force_update=force_update, update_fields=update_fields)
+[Mon Oct 18 04:39:49.511440 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 765, in save_base
+[Mon Oct 18 04:39:49.511446 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]     force_update, using, update_fields,
+[Mon Oct 18 04:39:49.511453 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 868, in _save_table
+[Mon Oct 18 04:39:49.511460 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]     results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+[Mon Oct 18 04:39:49.511466 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 908, in _do_insert
+[Mon Oct 18 04:39:49.511473 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]     using=using, raw=raw,
+[Mon Oct 18 04:39:49.511494 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+[Mon Oct 18 04:39:49.511502 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]     return getattr(self.get_queryset(), name)(*args, **kwargs)
+[Mon Oct 18 04:39:49.511508 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1270, in _insert
+[Mon Oct 18 04:39:49.511514 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]     return query.get_compiler(using=using).execute_sql(returning_fields)
+[Mon Oct 18 04:39:49.511520 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+[Mon Oct 18 04:39:49.511526 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]     for sql, params in self.as_sql():
+[Mon Oct 18 04:39:49.511532 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+[Mon Oct 18 04:39:49.511538 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]     for obj in self.query.objs
+[Mon Oct 18 04:39:49.511544 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+[Mon Oct 18 04:39:49.511550 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]     for obj in self.query.objs
+[Mon Oct 18 04:39:49.511556 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+[Mon Oct 18 04:39:49.511562 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]     [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+[Mon Oct 18 04:39:49.511568 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1310, in pre_save_val
+[Mon Oct 18 04:39:49.511574 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]     return field.pre_save(obj, add=True)
+[Mon Oct 18 04:39:49.511580 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 302, in pre_save
+[Mon Oct 18 04:39:49.511586 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]     file.save(file.name, file.file, save=False)
+[Mon Oct 18 04:39:49.511592 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 89, in save
+[Mon Oct 18 04:39:49.511598 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]     self.name = self.storage.save(name, content, max_length=self.field.max_length)
+[Mon Oct 18 04:39:49.511604 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 54, in save
+[Mon Oct 18 04:39:49.511610 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]     return self._save(name, content)
+[Mon Oct 18 04:39:49.511616 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 255, in _save
+[Mon Oct 18 04:39:49.511622 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]     os.makedirs(directory, exist_ok=True)
+[Mon Oct 18 04:39:49.511632 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]   File "/usr/lib/python3.6/os.py", line 220, in makedirs
+[Mon Oct 18 04:39:49.511639 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515]     mkdir(name, mode)
+[Mon Oct 18 04:39:49.511647 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515] PermissionError: [Errno 13] Permission denied: '/media/vaccine_pic'
+[Mon Oct 18 04:39:49.511660 2021] [wsgi:error] [pid 2201:tid 139671154870016] [remote 192.169.10.254:54515] 
+Exception ignored in: <bound method BaseEventLoop.__del__ of <_UnixSelectorEventLoop running=False closed=False debug=False>>
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/asyncio/base_events.py", line 526, in __del__
+NameError: name 'ResourceWarning' is not defined
+[Mon Oct 18 04:44:35.161187 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:62186] Not Found: /assets/js/breakpoints.min.js
+[Mon Oct 18 04:45:02.976859 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722] Internal Server Error: /
+[Mon Oct 18 04:45:02.976906 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722] Traceback (most recent call last):
+[Mon Oct 18 04:45:02.976914 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+[Mon Oct 18 04:45:02.976921 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]     response = get_response(request)
+[Mon Oct 18 04:45:02.976928 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+[Mon Oct 18 04:45:02.976935 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+[Mon Oct 18 04:45:02.976941 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]   File "/savechumphon/django/savecmpo/main/views.py", line 13, in Home
+[Mon Oct 18 04:45:02.976947 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]     form.save()
+[Mon Oct 18 04:45:02.976954 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]   File "/savechumphon/venv/lib/python3.6/site-packages/django/forms/models.py", line 468, in save
+[Mon Oct 18 04:45:02.976960 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]     self.instance.save()
+[Mon Oct 18 04:45:02.976966 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]   File "/savechumphon/django/savecmpo/main/models.py", line 73, in save
+[Mon Oct 18 04:45:02.976973 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]     return super(Savecmpo, self).save(*args, **kwargs)
+[Mon Oct 18 04:45:02.976979 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 727, in save
+[Mon Oct 18 04:45:02.976986 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]     force_update=force_update, update_fields=update_fields)
+[Mon Oct 18 04:45:02.976992 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 765, in save_base
+[Mon Oct 18 04:45:02.976999 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]     force_update, using, update_fields,
+[Mon Oct 18 04:45:02.977005 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 868, in _save_table
+[Mon Oct 18 04:45:02.977029 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]     results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+[Mon Oct 18 04:45:02.977036 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/base.py", line 908, in _do_insert
+[Mon Oct 18 04:45:02.977042 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]     using=using, raw=raw,
+[Mon Oct 18 04:45:02.977048 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+[Mon Oct 18 04:45:02.977054 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]     return getattr(self.get_queryset(), name)(*args, **kwargs)
+[Mon Oct 18 04:45:02.977059 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1270, in _insert
+[Mon Oct 18 04:45:02.977065 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]     return query.get_compiler(using=using).execute_sql(returning_fields)
+[Mon Oct 18 04:45:02.977071 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+[Mon Oct 18 04:45:02.977077 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]     for sql, params in self.as_sql():
+[Mon Oct 18 04:45:02.977083 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+[Mon Oct 18 04:45:02.977089 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]     for obj in self.query.objs
+[Mon Oct 18 04:45:02.977095 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+[Mon Oct 18 04:45:02.977100 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]     for obj in self.query.objs
+[Mon Oct 18 04:45:02.977106 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+[Mon Oct 18 04:45:02.977112 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]     [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+[Mon Oct 18 04:45:02.977118 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1310, in pre_save_val
+[Mon Oct 18 04:45:02.977124 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]     return field.pre_save(obj, add=True)
+[Mon Oct 18 04:45:02.977130 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 302, in pre_save
+[Mon Oct 18 04:45:02.977136 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]     file.save(file.name, file.file, save=False)
+[Mon Oct 18 04:45:02.977141 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]   File "/savechumphon/venv/lib/python3.6/site-packages/django/db/models/fields/files.py", line 89, in save
+[Mon Oct 18 04:45:02.977147 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]     self.name = self.storage.save(name, content, max_length=self.field.max_length)
+[Mon Oct 18 04:45:02.977153 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 54, in save
+[Mon Oct 18 04:45:02.977164 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]     return self._save(name, content)
+[Mon Oct 18 04:45:02.977171 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]   File "/savechumphon/venv/lib/python3.6/site-packages/django/core/files/storage.py", line 255, in _save
+[Mon Oct 18 04:45:02.977177 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]     os.makedirs(directory, exist_ok=True)
+[Mon Oct 18 04:45:02.977182 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]   File "/usr/lib/python3.6/os.py", line 220, in makedirs
+[Mon Oct 18 04:45:02.977188 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722]     mkdir(name, mode)
+[Mon Oct 18 04:45:02.977197 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722] PermissionError: [Errno 13] Permission denied: '/media/vaccine_pic'
+[Mon Oct 18 04:45:02.977209 2021] [wsgi:error] [pid 1640:tid 140042654615296] [remote 192.169.10.254:53722] 
+[Mon Oct 18 04:58:52.479729 2021] [wsgi:error] [pid 2211:tid 139810893453056] [remote 192.169.10.254:55179] Not Found: /assets/js/breakpoints.min.js
+[Mon Oct 18 04:58:53.552040 2021] [wsgi:error] [pid 2211:tid 139810885052160] [remote 192.169.10.254:53005] Not Found: /assets/js/breakpoints.min.js
+[Mon Oct 18 04:58:53.941214 2021] [wsgi:error] [pid 2211:tid 139810893453056] [remote 192.169.10.254:53005] Not Found: /favicon.ico
+[Mon Oct 18 04:59:27.479268 2021] [wsgi:error] [pid 2211:tid 139810893453056] [remote 192.169.10.254:59168] Not Found: /thank/assets/js/breakpoints.min.js

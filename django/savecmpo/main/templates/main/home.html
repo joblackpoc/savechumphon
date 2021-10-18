@@ -1,0 +1,106 @@
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<form method="post" enctype="multipart/form-data" id="inputForm" data-index-url="{% url 'ajax-load-index' %}" novalidate>
+    {% csrf_token %}
+    <table>
+        <!--form.as_table-->
+    </table>
+
+    <div class="row gtr-uniform">
+        <div class="col-12">
+            {{form.fname|as_crispy_field}}
+        </div>
+        <div class="col-12">
+            {{form.lname|as_crispy_field}}
+        </div>
+        <div class="col-12">
+            {{form.gender|as_crispy_field}}
+        </div>
+        <div class="col-12">
+            {{form.age|as_crispy_field}}
+        </div>
+        <div class="col-12">
+            {{form.id_card|as_crispy_field}}
+        </div>
+        <div class="col-12">
+            {{form.mobile_phone|as_crispy_field}}
+        </div>
+        <div class="col-12">
+            {{form.mobile_partner|as_crispy_field}}
+        </div>
+        <div class="col-12">
+            <label for="">วันที่เดินทางมาถึงจังหวัดชุมพร</label>
+            {{form.date_arrive}}
+        </div>
+        <div class="col-12">
+            <label for="">วันที่เดินทางออกจากจังหวัดชุมพร</label>
+            {{form.date_leave}}
+        </div>
+        <div class="col-12">
+            {{form.Cchangwat|as_crispy_field}}
+        </div>
+        <div class="col-12">
+             {{form.campur|as_crispy_field}}
+             <label for="">หลังจากเลือกอำเภอเสร็จแล้ว รอ 1 วินาทีเพื่อกดเลือกตำบล</label>
+        </div>
+        <!-- Break -->
+        <div class="col-12">
+            {{form.ctambon|as_crispy_field}}
+            <label for="">หากยังไม่ปรากฏชื่อตำบลให้กดเลือกตำบลที่พักอีก 1 ครั้ง</label>
+        </div>
+        <div class="col-12">
+            {{form.moo|as_crispy_field}}
+        </div>
+        <div class="col-12">
+            {{form.house|as_crispy_field}}
+        </div>
+        <div class="col-12">
+            {{form.duty|as_crispy_field}}
+        </div>
+        <div class="col-12">
+            {{form.vaccine_pic|as_crispy_field}}
+        </div>
+        <div class="col-12">
+            {{form.sickness|as_crispy_field}}
+        </div>
+        <div class="col-12">
+            {{form.lab|as_crispy_field}}
+        </div>
+
+        <div class="col-12">
+            <ul class="actions">
+                <li><input type="submit" value="ยืนยันข้อมูล" class="primary" /></li>
+                <li><input type="reset" value="ยกเลิก" /></li>
+            </ul>
+        </div>
+        <div class="col-12">
+            <ul class="actions">
+                <li><label for="">หากกดยืนยันข้อมูลแล้วระบบไม่ตอบรับ ให้ท่านกลับไปเลือกตำบลอีกครั้ง แล้วกดยืนยันข้อมูล</label></li>
+                
+            </ul>
+        </div>
+    </div>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    $("#id_campur").change(function () {
+        var url = $("#inputForm").attr("data-index-url");
+        var ampurcodefull = $(this).val();
+
+        $.ajax({
+        url: url,
+        data: {
+            'campur': ampurcodefull
+        },
+        success: function (data) {
+            $("#id_ctambon").html(data);
+        }
+        });
+
+    });
+    </script>
+
+{% endblock content %}

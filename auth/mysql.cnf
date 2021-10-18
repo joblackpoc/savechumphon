@@ -1,0 +1,5 @@
+[client]
+database = 'savechumphon'
+user = 'admin'
+password = 'Admin@covid-19'
+default-character-set = 'utf8'
