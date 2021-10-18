@@ -1,7 +1,6 @@
 from django import forms
 from main.models import Ctambon, Savecmpo
 
-
 class InputForm(forms.ModelForm):
 
     class Meta:
