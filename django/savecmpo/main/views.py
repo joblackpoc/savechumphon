@@ -1,5 +1,5 @@
 from django import forms
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
 from main.forms import InputForm
 from .models import Ctambon
 
