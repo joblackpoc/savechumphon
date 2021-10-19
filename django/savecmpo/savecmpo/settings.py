@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'crispy_forms',
+    'backend',
 
 ]
 
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'savecmpo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'main/templates')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,7 +82,7 @@ DATABASES = {
 	'default':{
 	    'ENGINE':'django.db.backends.mysql',
 	        'NAME': 'savechumphon',
-		    'HOST': '172.16.30.200',
+		    'HOST': '61.19.80.143',
             'PORT': '3306',
             'USER': 'admin',
             'PASSWORD': 'Admin@covid-19',

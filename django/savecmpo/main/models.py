@@ -3,6 +3,7 @@ from django.utils import timezone
 from django.db import models
 from django.db.models.fields.related import ForeignKey
 from PIL import Image
+from django.urls import reverse
 
 # Create your models here.
 
@@ -61,9 +62,9 @@ class Savecmpo(models.Model):
     moo = models.CharField(max_length=255, null=True, blank=True)
     house = models.CharField(max_length=255)
     duty = models.ForeignKey(Duty, on_delete=models.CASCADE)
-    vaccine_pic = models.ImageField(upload_to ='vaccine_pic/', blank=True)
-    sickness = models.ImageField(upload_to ='sickness/', blank=True)
-    lab = models.ImageField(upload_to='lab/', blank=True)
+    vaccine_pic = models.ImageField(default='default.jpg', upload_to ='vaccine_pic/')
+    sickness = models.ImageField(default='default.jpg', upload_to ='sickness/')
+    lab = models.ImageField(default='default.jpg', upload_to='lab/')
     input_date = models.DateTimeField(default=timezone.now)
 
     def save(self, *args, **kwargs):
@@ -74,3 +75,7 @@ class Savecmpo(models.Model):
 
     def __str__(self):
         return self.fname+' - '+self.lname+' - '+self.id_card
+
+    def get_absolute_url(self):
+        return reverse("detailview", kwargs={"pk": self.pk})
+    

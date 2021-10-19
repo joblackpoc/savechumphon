@@ -1,0 +1,83 @@
+{% extends 'backend/base.html' %}
+
+{% block content %}
+
+
+        <!-- Latest Users -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">ผู้เดินทางเข้ามาจังหวัดชุมพร</h3>
+          </div>
+          <div class="panel-body">
+            <table class="table table-striped table-hover">
+
+                <tr>
+                  <td>ลำดับที่</td>
+                  <td>{{ object.id }}</td>
+                </tr>
+                <tr>
+                  <td>ชื่อ</td>
+                  <td>{{ object.fname }}</td>
+                </tr>
+                <tr>
+                  <td>นามสกุล</td>
+                  <td>{{ object.lname }}</td>
+                </tr>
+                <tr>
+                  <td>เพศ</td>
+                  <td>{{ object.gender }}</td>
+                </tr>             
+                  <td>อายุ</td>
+                  <td>{{ object.age }}</td>
+                </tr>
+                <tr>
+                  <td>เลขประจำตัวประชาชน</td>
+                  <td>{{ object.id_card }}</td>
+                </tr>        
+                <tr>
+                  <td>เบอร์โทรศัพท์มือถือ</td>
+                  <td>{{ object.mobile_phone }}</td>
+                </tr>              
+                  <td>เบอร์โทรศัพท์คนใกล้ชิด</td>
+                  <td>{{ object.mobile_partner }}</td>
+                </tr>               
+                  <td>มาจากจังหวัด</td>
+                  <td>{{ object.Cchangwat }}</td>
+                </tr>             
+                  <td>วันที่เดินทางมาถึง</td>
+                  <td>{{ object.date_arrive }}</td>
+                </tr>             
+                  <td>พักที่อำเภอ</td>
+                  <td>{{ object.campur }}</td>
+                </tr>              
+                  <td>พักที่ตำบล</td>
+                  <td>{{ object.tambon }}</td>
+                </tr>               
+                  <td>พักที่หมู่บ้าน</td>
+                  <td>{{ object.moo }}</td>
+                </tr>               
+                  <td>บ้านเลขที่อยู่อาศัย</td>
+                  <td>{{ object.house }}</td>
+                </tr>               
+                  <td>เหตุผลในการเดินทาง</td>
+                  <td>{{ object.duty }}</td>
+                </tr>              
+              </tr>               
+                <td>วันที่เดินทางออกจากชุมพร</td>
+                <td>{{ object.date_leave }}</td>
+              </tr>  
+              </table>
+              <div class="media">
+                <img src="{{ object.vaccine_pic.url }}" alt="" width="300">
+              </div>
+              <div>
+                <img src="{{ object.lab.url }}" alt="" width="300">
+              </div>
+          </div>
+        </div>
+
+       
+
+
+{% endblock content %}
+  
