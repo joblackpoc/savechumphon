@@ -16,8 +16,8 @@ body{
 }
 
 .navbar-default {
-  background-color: #27CF1B;
-  border-color: #27CF1B;
+  background-color: #e74c3c;
+  border-color: #c0392b;
 }
 .navbar-default .navbar-brand {
   color: #ecf0f1;
@@ -40,20 +40,20 @@ body{
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #ffbbbc;
-  background-color: #27CF1B;
+  background-color: #c0392b;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
   color: #ffbbbc;
-  background-color: #27CF1B;
+  background-color: #c0392b;
 }
 .navbar-default .navbar-toggle {
-  border-color: #27CF1B;
+  border-color: #c0392b;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #27CF1B;
+  background-color: #c0392b;
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #ecf0f1;
@@ -71,8 +71,8 @@ body{
 
 /* Custom */
 .main-color-bg{
-  background-color: #27CF1B !important;
-  border-color: #27CF1B !important;
+  background-color: #e74c3c !important;
+  border-color: #c0392b !important;
   color:#ffffff !important;
 }
 
