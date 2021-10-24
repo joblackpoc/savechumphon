@@ -18,7 +18,8 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from main.views import Home, thank, load_index 
-from backend.views import Index, SavecmpoListView, SavecmpoDetailview
+from backend.views import Index, SavecmpoListView, SavecmpoDetailview, Search, Search_list
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Home, name='home'),
@@ -27,5 +28,8 @@ urlpatterns = [
     path('index/', Index, name='index'),
     path('listview/', SavecmpoListView.as_view(), name='listview'),
     path('detailview/<int:pk>', SavecmpoDetailview.as_view(), name='detailview'),
+    path('search/', Search, name='search'),
+    path('search_list/', Search_list, name='search-list'),
+ 
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

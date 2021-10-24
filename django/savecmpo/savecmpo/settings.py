@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'main',
     'crispy_forms',
     'backend',
+    'widget_tweaks',
+    'django_filters',
 
 ]
 
@@ -81,11 +83,11 @@ WSGI_APPLICATION = 'savecmpo.wsgi.application'
 DATABASES = {
 	'default':{
 	    'ENGINE':'django.db.backends.mysql',
-	        'NAME': '000000',
-		    'HOST': '0000000',
-            'PORT': '00000',
-            'USER': '000000',
-            'PASSWORD': '0000000',
+	        'NAME': '0000',
+		    'HOST': '0000',
+            'PORT': '0000',
+            'USER': '0000',
+            'PASSWORD': '0000',
 	}
 }
 
