@@ -1,7 +1,7 @@
 from django.core import paginator
 from django.http import request, response
 from django.shortcuts import render
-from main.models import Campur, Savecmpo
+from main.models import Savecmpo
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.views.generic import ListView, DetailView
 from django.db.models import Q, query
@@ -31,20 +31,21 @@ def Search(request):
     person_filter_form = person_filter.form
     return render(request, 'backend/person_list_search.html', {'person_filter': person_filter, 'person_filter_form':person_filter_form})
 
-def Search_list(request):
-    person_list = Savecmpo.objects.all()
-    person_filter = PersonFilter(request.GET, queryset=person_list)
-    person_filter_form = person_filter.form
-    
-    person_filter = person_filter.qs
-    paginator = Paginator(person_filter, 15)
+class SearchList(ListView):
+    model = Savecmpo
+    template_name = 'backend/search_list.html'
+    paginate_by = 3
 
-    page = request.GET.get('page')
-    try:
-        response = paginator.page(page)
-    except PageNotAnInteger:
-        response = paginator.page(1)
-    except EmptyPage:
-        response = paginator.page(paginator.num_pages)
-        
-    return render(request, 'backend/search_list.html', {'filter':response, 'person_filter_form':person_filter_form})
+    def get_queryset(self):
+        filter_val = self.request.GET.get('filter', '')
+        if filter_val!='':
+            persons = Savecmpo.objects.filter(Q(fname__contains=filter_val) | Q(lname__contains=filter_val) | Q(id_card__contains=filter_val) | Q(campur__contains=filter_val) | Q(ctambon__contains=filter_val))
+        else:
+            persons = Savecmpo.objects.all()
+        return persons
+
+    def get_context_data(self, **kwargs):
+        context = super(SearchList, self).get_context_data(**kwargs)
+        context['filter'] = self.request.GET.get('filter', '')
+        context['all_table_fields'] = Savecmpo._meta.get_fields()
+        return context

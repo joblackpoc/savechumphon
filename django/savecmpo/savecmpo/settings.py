@@ -83,11 +83,11 @@ WSGI_APPLICATION = 'savecmpo.wsgi.application'
 DATABASES = {
 	'default':{
 	    'ENGINE':'django.db.backends.mysql',
-	        'NAME': '0000',
-		    'HOST': '0000',
-            'PORT': '0000',
-            'USER': '0000',
-            'PASSWORD': '0000',
+	        'NAME': 'savechumphon',
+		    'HOST': '61.19.80.143',
+            'PORT': '3306',
+            'USER': 'admin',
+            'PASSWORD': 'Admin@covid-19',
 	}
 }
 
