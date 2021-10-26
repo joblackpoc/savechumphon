@@ -83,6 +83,7 @@ DATABASES = {
 	    'ENGINE':'django.db.backends.mysql',
 	        'NAME': 'savechumphon',
 		    'HOST': '172.16.30.200',
+		    'HOST': '61.19.80.143',
             'PORT': '3306',
             'USER': 'admin',
             'PASSWORD': 'Admin@covid-19',
