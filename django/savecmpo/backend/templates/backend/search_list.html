@@ -1,5 +1,6 @@
 {% extends 'backend/base.html' %}
 {% load crispy_forms_tags %}
+{% load backend_extras %}
 {% block content %}
 
         <!-- Latest Users -->
@@ -7,8 +8,8 @@
           <div class="panel-heading">
             <h3 class="panel-title">ผู้เดินทางเข้ามาจังหวัดชุมพร</h3>
             <form method='GET'>
-              
-              <button class="btn" type="submit">Search</button>             
+              {{person_form|crispy}}
+              <button class="btn btn-primary" type="submit">Search</button>             
             </form>
           </div>
           <div class="panel-body">
@@ -22,7 +23,7 @@
                   <th>รายละเอียด</th>
                 </tr>
                 
-                {% for person in savecmpo_list %}
+                {% for person in persons %}
                 <tr>
                   <td>{{ person.fname }}</td>
                   <td>{{ person.lname }}</td>
@@ -34,35 +35,49 @@
                 {% endfor %}
                
               </table>
-              <!--Pagination start-->
-              {% if posts.has_other_pages %}
-                <ul class="pagination">
-                    {% if persons.has_previous %}
-                        <li class="waves-effect"><a href="?page=
-                                {{ persons.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">
-                                <i class="material-icons">chevron_left</i></a></li>
-                    {% else %}
-                        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                    {% endif %}
-                    {% for num in persons.paginator.page_range %}
-                        {% if persons.number == num %}
-                            <li class="active"><a href="#!">{{ num }}</a></li>
-                        {% else %}
-                            <li class="waves-effect"><a
-                                    href="?page={{ num }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">{{ num }}</a></li>
-                        {% endif %}
-                    {% endfor %}
-                    {% if persons.has_next %}
-                        <li class="waves-effect"><a
-                                href="?page={{ persons.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}"><i
-                                class="material-icons">chevron_right</i></a></li>
-                    {% else %}
-                        <li class="disabled"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-                    {% endif %}
-                </ul>
-              {% endif %}
+  <!--Pagination start-->
+              <div class="paginator">
 
-              <!--Pagination end-->
+                <ul class="pagination">
+                  {% if is_paginated %}
+                      {% if persons.has_previous %}
+                          <li class="page-item">
+                              <a class="page-link" href="?{% persons page=1 %}">First</a>
+                          </li>
+                          {% if persons.previous_page_number != 1 %}
+                              <li class="page-item">
+                                  <a class="page-link" href="?{% persons page=page_obj.previous_page_number %}">Previous</a>
+                              </li>
+                          {% endif %}
+                      {% endif %}
+                  
+                      {% for num in persons.paginator.page_range %}
+                          {% if persons.number == num %}
+                              <li class="page-item">
+                                  <a class="page-link" href="?{% persons page=num %}">{{ num }}</a>
+                              </li>
+                          {% elif num > persons.number|add:'-3' and num < persons.number|add:'3' %}
+                              <li class="page-item">
+                                  <a class="page-link" href="?{% persons page=num %}">{{ num }}</a>
+                              </li>
+                          {% endif %}
+                      {% endfor%}
+                  
+                      {% if persons.has_next %}
+                          {% if persons.next_page_number != paginator.num_pages %}
+                          <li class="page-item">
+                              <a class="page-link" href="?{% persons page=page_obj.next_page_number %}">Next</a>
+                          </li>
+                          {% endif %}
+                          <li>
+                              <a class="page-link" href="?{% persons page=page_obj.paginator.num_pages %}">Last</a>
+                          </li>
+                      {% endif %}
+                  {% endif %}
+                </ul>
+
+              </div>
+  <!--Pagination end-->
           </div>
         </div>
 
