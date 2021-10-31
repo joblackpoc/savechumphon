@@ -18,7 +18,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
 from main.views import Home, thank, load_index
-from backend.views import Index, SavecmpoListView, SavecmpoDetailview, Search, Searchlist
+from backend.views import Index, SavecmpoListView, SavecmpoDetailview, Search, Searchlist, exportexcel
 
 urlpatterns = [
 
@@ -31,5 +31,6 @@ urlpatterns = [
     path('detailview/<int:pk>', SavecmpoDetailview.as_view(), name='detailview'),
     path('search/', Search, name='search'),
     path('searchlist/', Searchlist, name='searchlist'),
+    path('exportexcel/', exportexcel, name='exportexcel'),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
